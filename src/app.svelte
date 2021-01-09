@@ -16,8 +16,6 @@
     <Nav onSelect={ handleSelect } />
   </div>
 
-  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" style="display: none">Tweet</a>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 <script>
@@ -106,12 +104,6 @@
   .nav {
     margin-top: auto;
     padding-top: 2em;
-  }
-
-  :global(iframe[src*="twitter"]) {
-    position: absolute !important;
-    top: 1em;
-    right: 1em;
   }
 
   @media screen and (max-width: 420px) {

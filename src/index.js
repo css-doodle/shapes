@@ -3,8 +3,6 @@ import './basic.css';
 
 import App from './app.svelte';
 
-let app = new App({
-  target: document.body
+new App({
+  target: document.getElementById('app')
 });
-
-export default app;

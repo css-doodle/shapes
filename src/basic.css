@@ -5,7 +5,7 @@
 *:after, *:before {
   box-sizing: inherit
 }
-html, body {
+html, body, #app {
   margin: 0;
   height: 100%
 }
@@ -28,4 +28,10 @@ a:hover, a:active {
 h1, h2 {
   font-weight: normal;
   color: #fff;
+}
+
+iframe[src*="twitter"] {
+  position: absolute !important;
+  top: 1em;
+  right: 1em;
 }
