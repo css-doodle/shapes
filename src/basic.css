@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+*:after, *:before {
+  box-sizing: inherit
+}
+html, body {
+  margin: 0;
+  height: 100%
+}
+body {
+  background: #000;
+  font-size: 16px;
+  color: rgba(255, 255, 255, .7);
+  font-family: system-ui;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  transition: background .2s ease;
+}
+a:link, a:visited {
+  color: #ffc107;
+}
+a:hover, a:active {
+  background: rgba(255, 255, 255, .2);
+}
+h1, h2 {
+  font-weight: normal;
+  color: #fff;
+}
