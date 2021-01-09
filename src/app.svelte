@@ -3,7 +3,7 @@
     <Graph bind:this={graph} />
   </div>
 
-  <div class="editor" class:fixed={mode == 'rule'}>
+  <div class="editor" class:fixed={mode == 'css'}>
     <Editor
       content={ content }
       onChange={ handleChange }
@@ -27,7 +27,7 @@
 
   let graph;
   let editor;
-  let mode = 'css';
+  let mode = 'rule';
   let content = shapes[Math.floor(Math.random() * shapes.length)];
 
   function handleChange(value, initial) {
@@ -45,7 +45,7 @@
 
   function handleToggle(name) {
     mode = name;
-    if (name == 'rule') {
+    if (name == 'css') {
       let value = graph.getShapeStyle();
       editor.update(value, { triggerChange: false });
     } else {
@@ -54,6 +54,7 @@
   }
 
   function handleSelect(shape) {
+    editor.setToggle('rule');
     editor.update(shape);
     if (history.replaceState) {
       history.replaceState({}, '', '?');

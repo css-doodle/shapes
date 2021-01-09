@@ -4,6 +4,7 @@
   <div class="toggler">
     <Toggler
       onChange={handleToggleChange}
+      name={toggleMode}
     />
   </div>
 </div>
@@ -27,7 +28,7 @@
   let editor;
   let lastId;
   let lastContent;
-  let toggleMode;
+  let toggleMode = 'rule';
   let triggerChange = true;
 
   $: if (id !== lastId) {
@@ -54,7 +55,7 @@
     if (typeof onToggle === 'function') {
       onToggle(name);
     }
-    if (toggleMode == 'rule') {
+    if (toggleMode == 'css') {
       editor.setOption('readOnly', 'nocursor');
     } else {
       editor.setOption('readOnly', '');
@@ -70,6 +71,10 @@
     }
     editor.setValue(value.trim());
     editor.clearHistory();
+  }
+
+  export function setToggle(name) {
+    toggleMode = name;
   }
 
   onMount(() => {

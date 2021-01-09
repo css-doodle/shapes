@@ -7,7 +7,7 @@
 
 <script>
   export let onChange;
-  let name = 'css';
+  export let name = 'rule';
 
   function toggle() {
     name = (name == 'css' ? 'rule' : 'css');
