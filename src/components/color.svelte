@@ -52,8 +52,6 @@
     top: 0;
     left: 0;
     outline: none;
-    width: 0;
-    height: 0;
     overflow: hidden;
     border: none;
     opacity: 0;
