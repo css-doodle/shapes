@@ -133,7 +133,7 @@
 
   .nav {
     margin-top: auto;
-    padding-top: 2em;
+    padding-top: 4em;
   }
 
   @media screen and (max-width: 420px) {
