@@ -88,14 +88,14 @@ const rules = `
 
   split: 200;
   scale: .4;
-  x: sin(t) + cos(7t) + cos(2t);
+  x: sin(t) + cos(7t) + cos(2t) + .35;
   y: cos(4t) + sin(4t) + sin(t);
 
 
   fill-rule: evenodd;
   split: 200;
-  r: cos(5t) * cos(5t) + sin(5t) + .3;
   scale: .6;
+  r: cos(5t) * cos(5t) + sin(5t) + .3;
 `;
 
 function trim(line) {
