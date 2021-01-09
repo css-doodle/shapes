@@ -2,10 +2,42 @@
   <css-doodle use="var(--bg)" bind:this={doodle}></css-doodle>
 </div>
 
+<div class="control">
+  <button>
+    <Color onInput={handleInput} color={color} />
+  </button>
+  <button class="download" on:click={handleDownload}>
+    <span>SAVE</span>
+  </button>
+</div>
+
 <script>
+  import Color from './color.svelte';
+  export let color = '#fff';
+  export let onColorChange;
+
   let doodle;
+  let code = '';;
+
+  function handleDownload() {
+    doodle.export({ download: true, scale: 6 });
+  }
+
+  function handleInput(value) {
+    color = value;
+    doodle.update(code + `;background: ${color};`);
+    if (typeof onColorChange === 'function') {
+      onColorChange(color);
+    }
+  }
+
+  $: if (color && doodle) {
+    doodle.update(code + `;background: ${color};`);
+  }
+
   export function update(value) {
-    doodle.update(value);
+    code = value;
+    doodle.update(code + `;background: ${color};`);
   }
 
   export function getShapeStyle() {
@@ -18,7 +50,7 @@
     return (
 `
 .shape {
-  background: #fff;
+  background: ${color};
   width: 300px; height: 300px;
   clip-path: ${ value };
 }
@@ -51,8 +83,41 @@
     padding: 5px;
     --bg: (
       background: #fff;
-      transition: .2s ease;
+      transition: clip-path .2s ease;
     );
+  }
+
+  .control {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    background: none;
+    border: 0;
+    outline: none;
+    color: rgba(255, 255, 255, .6);
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  .download {
+    margin-left: 10px;
+    transition: .2s ease;
+    height: 24px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    line-height: 0;
+    width: 48px;
+    text-align: center;
+  }
+
+  .download:hover {
+    color: #ffc107;
+    border-color: #ffc107;
   }
 
   @media screen and (max-width: 32.25em) {

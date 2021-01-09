@@ -1,6 +1,10 @@
 <div class="container">
   <div class="graph">
-    <Graph bind:this={graph} />
+    <Graph
+      bind:this={graph}
+      onColorChange={handleColorChange}
+      color={graphColor}
+    />
   </div>
 
   <div class="editor" class:fixed={mode == 'css'}>
@@ -25,10 +29,29 @@
   import Nav from './components/nav.svelte';
   import shapes from './shapes';
 
+  import throttle from 'lodash/throttle';
+
   let graph;
+  let graphColor = '#fff';
   let editor;
   let mode = 'rule';
   let content = shapes[Math.floor(Math.random() * shapes.length)];
+
+  let updateHash = throttle(_updateHash, 500);
+
+  function _updateHash(value, color) {
+    if (history.replaceState && value.length) {
+      history.replaceState({}, '',
+        '?rule=' + encodeURIComponent(value) +
+        '&color=' + encodeURIComponent(color)
+      );
+    }
+  }
+
+  function handleColorChange(value) {
+    graphColor = value;
+    updateHash(content, graphColor);
+  }
 
   function handleChange(value, initial) {
     content = value;
@@ -39,7 +62,7 @@
     `);
 
     if (!initial) {
-      updateHash(value);
+      updateHash(value, graphColor);
     }
   }
 
@@ -61,17 +84,23 @@
     }
   }
 
-  function updateHash(value) {
-    if (history.replaceState && value.length) {
-      history.replaceState({}, '', '?rule=' + encodeURIComponent(value));
-    }
+  function parseQueryString(str) {
+    let groups = str.substr(1).split('&');
+    let ret = {};
+    groups.forEach(group => {
+      let [name, value] = group.split('=');
+      ret[name] = decodeURIComponent(value);
+    });
+    return ret;
   }
 
   onMount(() => {
-    let rule = location.search.split('rule=')[1];
+    let { rule, color } = parseQueryString(location.search);
+    if (color) {
+      graphColor = color;
+    }
     if (rule) {
-      rule = decodeURIComponent(rule);
-      handleChange(decodeURIComponent(rule), true);
+      handleChange(rule, true);
       editor.update(rule);
     } else {
       handleChange(content, true);
@@ -99,7 +128,7 @@
   }
 
   .graph {
-    margin: 0 auto 8em;
+    margin: 0 auto 7em;
   }
 
   .nav {
