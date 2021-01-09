@@ -23,6 +23,8 @@
   export let onSelect;
   let popup;
 
+  let delay = 200;
+
   function handleBack(e) {
     popup.handleClose(e);
   }
@@ -80,7 +82,6 @@
         box-shadow: inset 0 0 0 1px #ffeb3b;
       }
       background: @var(--c);
-      transition: .2s ease;
     );
   }
   @media screen and (max-width: 47.5em) {
