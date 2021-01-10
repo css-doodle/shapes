@@ -53,3 +53,7 @@ button[reset] {
   cursor: pointer;
   line-height: 1;
 }
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
