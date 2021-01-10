@@ -108,6 +108,13 @@ const rules = `
   p1: pow(abs(1/a * cos(t * m/4)), n2);
   p2: pow(abs(1/b * sin(t * m/4)), n3);
   r: 1/pow(p1 + p2, 1/n1);
+
+
+  split: 200;
+  scale: .3;
+  rotate: 180;
+  x: sin(4t) + 2 * sin(t) * .8;
+  y: cos(t) + 2 * cos(t) * 2.4 + .3;
 `;
 
 function trim(line) {
