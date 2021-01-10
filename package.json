@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "codemirror": "^5.59.1",
-    "css-doodle": "0.13.4"
+    "css-doodle": "0.13.4",
+    "lodash": "^4.17.20"
   },
   "browserslist": [
     "last 2 version"
