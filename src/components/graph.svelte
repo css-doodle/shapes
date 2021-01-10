@@ -96,17 +96,18 @@
     margin-left: 10px;
     transition: .2s ease;
     height: 24px;
-    border: 1px solid rgba(255, 255, 255, .2);
+    border: 1px solid var(--color-button-border);
     line-height: 0;
     width: 48px;
     text-align: center;
-    color: rgba(255, 255, 255, .8);
+    color: var(--color-text);
     cursor: pointer;
+    border-radius: 3px;
   }
 
   .download:hover {
-    color: #ffc107;
-    border-color: #ffc107;
+    color: var(--color-main);
+    border-color: var(--color-main);
   }
 
   @media screen and (max-width: 32.25em) {

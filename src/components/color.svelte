@@ -34,10 +34,11 @@
     display: block;
     width: 48px;
     height: 24px;
-    border: 1px solid rgba(255, 255, 255, .2);
+    border: 1px solid var(--color-button-border);
     cursor: pointer;
     transition: border-color .2s ease;
     position: relative;
+    border-radius: 3px;
   }
 
   .handler:after {
@@ -48,7 +49,7 @@
     top: var(--offset);
     right: var(--offset);
     bottom: var(--offset);
-    background: var(--color, #fff);
+    background: var(--color);
   }
 
   .handler:hover {

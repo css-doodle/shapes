@@ -33,8 +33,10 @@
 
   let graph;
   let graphColor = '#fff';
+
   let editor;
   let mode = 'rule';
+
   let content = shapes[Math.floor(Math.random() * shapes.length)];
 
   let updateHash = throttle(_updateHash, 500);
@@ -133,10 +135,10 @@
 
   .nav {
     margin-top: auto;
-    padding-top: 4em;
+    padding-top: 5em;
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 26.25em) {
     .container {
       padding: 0;
     }

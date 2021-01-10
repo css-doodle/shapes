@@ -105,7 +105,7 @@
     z-index: 3;
     cursor: pointer;
     line-height: 0;
-    color: #fff;
+    color: var(--color-emphasis);
     transform: rotate(45deg);
     animation: rotate .2s;
     opacity: 0;

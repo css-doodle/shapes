@@ -22,9 +22,8 @@
     position: absolute;
     right: 0;
     top: 0;
-    color: rgba(255, 255, 255, .8);
-    padding: 4px 5px;
-    font-family: verdana;
+    color: var(--color-test);
+    padding: 6px 6px;
     background: rgba(255, 255, 255, .1);
     border-radius: 0 5px;
     display: flex;
@@ -32,12 +31,11 @@
     cursor: pointer;
     transition: .2s ease;
     user-select: none;
-    font-size: 1em;
   }
 
   .toggler:hover {
     background: rgba(255, 255, 255, .15);
-    color: #ffc107;
+    color: var(--color-main);
   }
 
   .toggler svg {

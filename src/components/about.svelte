@@ -56,7 +56,7 @@
       </li>
     </ul>
 
-    <Back on:click={handleBack} />
+    <Back onClose={handleBack} />
   </article>
 </Popup>
 
@@ -92,12 +92,12 @@
     display: inline-block;
     width: 4em;
     font-weight: normal;
-    color: #fff;
+    color: var(--color-emphasis);
     margin-right: .5em;
   }
 
   em {
-    color: #fff;
+    color: var(--color-emphasis);
   }
 
   @media screen and (max-width: 32.25em) {

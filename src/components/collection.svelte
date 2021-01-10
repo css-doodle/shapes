@@ -55,7 +55,7 @@
   h2 {
     font-size: 2em;
     margin-bottom: 1em;
-    color: rgba(255, 255, 255, .7);
+    color: var(--color-text);
   }
 
   .list {
@@ -71,15 +71,15 @@
     height: 100px;
     border-radius: 5px;
     padding: 10px;
-    background: rgba(255, 255, 255, .1);
+    background: var(--color-shape-bg);
     cursor: pointer;
     --basic: (
       :doodle {
-        --c: rgba(255, 255, 255, .85);
+        --c: var(--color-shape);
       }
       :doodle(:hover) {
-        --c: #fff;
-        box-shadow: inset 0 0 0 1px #ffc107;
+        --c: var(--color-emphasis);
+        box-shadow: inset 0 0 0 1px var(--color-main);
       }
       background: @var(--c);
     );

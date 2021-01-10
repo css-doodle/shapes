@@ -42,7 +42,6 @@
   .nav {
     list-style: none;
     text-align: center;
-    color: rgba(255, 255, 255, .5);
     padding: 0;
     margin: 0;
     display: flex;
@@ -56,11 +55,11 @@
   }
 
   .nav a:link, .nav a:visited {
-    color: rgba(255, 255, 255, .5);
+    color: var(--color-text);
   }
 
   .nav a:hover, .nav a:active {
-    color: #ffc107;
+    color: var(--color-main);
   }
 
   .external-link {
