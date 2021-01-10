@@ -79,7 +79,7 @@
       }
       :doodle(:hover) {
         --c: #fff;
-        box-shadow: inset 0 0 0 1px #ffeb3b;
+        box-shadow: inset 0 0 0 1px #ffc107;
       }
       background: @var(--c);
     );
