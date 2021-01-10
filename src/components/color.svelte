@@ -1,11 +1,18 @@
-<label>
-  <span class="handler" style="--color: {color}"></span>
-  <input type="color" value={color} on:input={handleInput} />
-</label>
+<button reset bind:this={button}>
+  <label for="color-picker">
+    <span class="handler" style="--color: {color}"></span>
+    <input type="color" id="color-picker" value={color} on:input={handleInput} tabindex="-1" bind:this={input} />
+  </label>
+</button>
 
 <script>
+  import { onMount } from 'svelte';
+
   export let onInput
   export let color = '#fff';
+
+  let button;
+  let input;
 
   function handleInput(e) {
     color = e.target.value;
@@ -13,6 +20,13 @@
       onInput(color);
     }
   }
+
+  onMount(() => {
+    button.addEventListener('click', e => {
+      input.click();
+    });
+  });
+
 </script>
 
 <style>

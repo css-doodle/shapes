@@ -1,12 +1,12 @@
 <div class="container">
-  <textarea bind:this={textarea} />
-
   <div class="toggler">
     <Toggler
       onChange={handleToggleChange}
       name={toggleMode}
     />
   </div>
+
+  <textarea bind:this={textarea} />
 </div>
 
 <script>
@@ -127,6 +127,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
   }
 
   @media screen and (max-width: 26.25em) {

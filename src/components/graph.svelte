@@ -3,10 +3,8 @@
 </div>
 
 <div class="control">
-  <button>
-    <Color onInput={handleInput} color={color} />
-  </button>
-  <button class="download" on:click={handleDownload}>
+  <Color onInput={handleInput} color={color} />
+  <button reset class="download" on:click={handleDownload}>
     <span>SAVE</span>
   </button>
 </div>
@@ -94,17 +92,6 @@
     justify-content: center;
   }
 
-  button {
-    background: none;
-    border: 0;
-    outline: none;
-    color: rgba(255, 255, 255, .6);
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    line-height: 1;
-  }
-
   .download {
     margin-left: 10px;
     transition: .2s ease;
@@ -113,6 +100,8 @@
     line-height: 0;
     width: 48px;
     text-align: center;
+    color: rgba(255, 255, 255, .8);
+    cursor: pointer;
   }
 
   .download:hover {
