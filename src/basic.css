@@ -44,12 +44,6 @@ h1, h2 {
   color: var(--color-title);
 }
 
-iframe[src*="twitter"] {
-  position: absolute !important;
-  top: 1em;
-  right: 1em;
-}
-
 button[reset] {
   background: none;
   border: 0;
