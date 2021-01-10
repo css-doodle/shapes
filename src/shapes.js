@@ -57,21 +57,21 @@ const rules = `
   fill-rule: evenodd;
   split: 200;
   scale: .3;
-  x: sin(t) + sin(t) + sin(7t);
-  y: cos(t) + cos(7t) + cos(t);
+  x: 2 * sin(t) + sin(7t);
+  y: 2 * cos(t) + cos(7t);
 
 
   split: 200;
   scale: .3;
   rotate: 30;
-  x: cos(3t) + cos(t) + cos(3t);
-  y: sin(2t) + sin(t) + sin(t);
+  x: 2 * cos(3t) + cos(t);
+  y: 2 * sin(t) + sin(2t);
 
 
   split: 200;
   scale: .3;
-  x: sin(4t) + sin(t) + sin(t);
-  y: cos(t) + cos(t) + cos(3t);
+  x: sin(4t) + 2 * sin(t);
+  y: cos(3t) + 2 * cos(t);
 
 
   split: 200;
