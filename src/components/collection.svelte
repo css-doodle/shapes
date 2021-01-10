@@ -3,10 +3,8 @@
     <div class="collection">
       <h2>Select to edit</h2>
       <div class="list">
-        {#each shapes as shape}
-          <css-doodle use="var(--basic)" on:click={select(shape)}>
-            clip-path: @shape({shape});
-          </css-doodle>
+        {#each shapes as shape, i}
+          <Doodle onClick={select(shape)} shape={shape} delay={150} />
         {/each}
       </div>
       <Back on:click={handleBack} />
@@ -18,6 +16,7 @@
   import Popup from './popup.svelte';
   import Back from './back.svelte';
   import shapes from '../shapes';
+  import Doodle from './doodle.svelte';
 
   export let onClose;
   export let onSelect;

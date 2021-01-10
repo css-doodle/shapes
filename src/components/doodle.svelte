@@ -1,0 +1,41 @@
+<css-doodle use="var(--basic)" on:click={onClick} bind:this={doodle}></css-doodle>
+
+<script>
+  export let onClick;
+  export let shape;
+  export let delay = 0;
+
+  let doodle;
+
+  $: if (shape) {
+    setTimeout(() => {
+      doodle.update(`
+        :doodle {
+          background: var(--color-shape-bg);
+        }
+        clip-path: @shape(${shape});
+        background: @var(--c);
+      `);
+    }, delay);
+  }
+</script>
+
+<style>
+  css-doodle {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    --basic: (
+      :doodle {
+        --c: var(--color-shape);
+      }
+      :doodle(:hover) {
+        --c: var(--color-emphasis);
+        box-shadow: inset 0 0 0 1px var(--color-main);
+      }
+      background: rgba(255, 255, 255, .1);
+    );
+  }
+</style>
