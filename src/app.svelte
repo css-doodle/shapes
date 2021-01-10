@@ -50,12 +50,18 @@
     }
   }
 
+  let updateCSSEditor = throttle(_updateCSSEditor, 500);
+
+  function _updateCSSEditor() {
+    let value = graph.getShapeStyle();
+    editor.update(value, { triggerChange: false });
+  }
+
   function handleColorChange(value) {
     graphColor = value;
     updateHash(content, graphColor);
     if (mode === 'css') {
-      let value = graph.getShapeStyle();
-      editor.update(value, { triggerChange: false });
+      updateCSSEditor();
     }
   }
 
