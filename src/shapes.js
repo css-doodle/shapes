@@ -115,6 +115,15 @@ const rules = `
   rotate: 180;
   x: sin(4t) + sin(t) * 1.6;
   y: cos(t) + cos(t) * 4.8 + .3;
+
+
+  split: 2400;
+  scale: .3;
+  rotate: 180;
+  s: sqrt(abs(cos(t))) / (sin(t) + 1.4);
+  R: (2 - 2 * sin(t) + sin(t) * s);
+  x: R * cos(t);
+  y: R * sin(t) + 1.5;
 `;
 
 function trim(line) {
