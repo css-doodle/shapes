@@ -113,8 +113,8 @@ const rules = `
   split: 200;
   scale: .3;
   rotate: 180;
-  x: sin(4t) + 2 * sin(t) * .8;
-  y: cos(t) + 2 * cos(t) * 2.4 + .3;
+  x: sin(4t) + sin(t) * 1.6;
+  y: cos(t) + cos(t) * 4.8 + .3;
 `;
 
 function trim(line) {
