@@ -65,31 +65,9 @@
     margin-bottom: 2em;
   }
 
-  css-doodle {
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    padding: 10px;
-    background: var(--color-shape-bg);
-    cursor: pointer;
-    --basic: (
-      :doodle {
-        --c: var(--color-shape);
-      }
-      :doodle(:hover) {
-        --c: var(--color-emphasis);
-        box-shadow: inset 0 0 0 1px var(--color-main);
-      }
-      background: @var(--c);
-    );
-  }
   @media screen and (max-width: 47.5em) {
     .list {
       grid-template-columns: repeat(5, 1fr);
-    }
-    css-doodle {
-      width: 80px;
-      height: 80px;
     }
   }
   @media screen and (max-width: 33.2em) {

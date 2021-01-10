@@ -53,6 +53,10 @@
   function handleColorChange(value) {
     graphColor = value;
     updateHash(content, graphColor);
+    if (mode === 'css') {
+      let value = graph.getShapeStyle();
+      editor.update(value, { triggerChange: false });
+    }
   }
 
   function handleChange(value, initial) {

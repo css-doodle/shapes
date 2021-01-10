@@ -38,4 +38,11 @@
       background: rgba(255, 255, 255, .1);
     );
   }
+
+  @media screen and (max-width:47.5em) {
+    css-doodle {
+      width: 80px;
+      height: 80px;
+    }
+  }
 </style>
