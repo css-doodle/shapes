@@ -89,6 +89,7 @@
   }
 
   function handleSelect(shape) {
+    mode = 'rule';
     editor.setToggle('rule');
     editor.update(shape);
     if (history.replaceState) {
