@@ -1,4 +1,8 @@
-<css-doodle use="var(--basic)" on:click={onClick} bind:this={doodle}></css-doodle>
+<css-doodle
+  on:click={onClick}
+  bind:this={doodle}
+  use="var(--basic)"
+/>
 
 <script>
   export let onClick;

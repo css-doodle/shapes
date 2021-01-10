@@ -1,14 +1,21 @@
 <button reset bind:this={button}>
   <label for="color-picker">
     <span class="handler" style="--color: {color}"></span>
-    <input type="color" id="color-picker" value={color} on:input={handleInput} tabindex="-1" bind:this={input} />
+    <input
+      type="color"
+      id="color-picker"
+      tabindex="-1"
+      value={color}
+      on:input={handleInput}
+      bind:this={input}
+    />
   </label>
 </button>
 
 <script>
   import { onMount } from 'svelte';
 
-  export let onInput
+  export let onInput;
   export let color = '#fff';
 
   let button;
@@ -53,7 +60,7 @@
   }
 
   .handler:hover {
-    border-color: #ffc107;
+    border-color: var(--color-main);
   }
 
   label {
