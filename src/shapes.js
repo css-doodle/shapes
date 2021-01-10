@@ -118,7 +118,7 @@ const rules = `
 
 
   split: 2400;
-  scale: .3;
+  scale: .34;
   rotate: 180;
   s: sqrt(abs(cos(t))) / (sin(t) + 1.4);
   R: (2 - 2 * sin(t) + sin(t) * s);
