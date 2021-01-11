@@ -2,7 +2,7 @@
 <div class="container" bind:this={ref}>
   <div class="body">
     <slot></slot>
-    <a href="?#" class="close" on:click={handleClose}>
+    <a href="#" class="close" on:click={handleClose}>
       <svg viewBox="0 0 10 10">
         <g stroke="currentColor" stroke-width=".5">
           <line x1="1" y1="1" x2="9" y2="9" />
