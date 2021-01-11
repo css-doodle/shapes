@@ -80,7 +80,6 @@
     height: 100%;
     padding: 5px;
     --bg: (
-      background: #fff;
       transition: clip-path .2s ease;
     );
   }
