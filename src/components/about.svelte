@@ -7,10 +7,9 @@
       and mathematical expressions.
     </p>
     <p>
-      You can use
+      The shape is defined with
       <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system">polar equations</a>
-      or <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">cartesian equations</a>
-      to define a shape.
+      or <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">cartesian equations</a>.
     </p>
 
     <h2>Commands</h2>

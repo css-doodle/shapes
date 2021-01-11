@@ -1,7 +1,8 @@
 # Shapes
 
-A tool for discovering new CSS polygon shapes generated with [css-doodle](https://css-doodle.com) and mathematical functions.
-The rules can be composed with [polar equations](https://en.wikipedia.org/wiki/Polar_coordinate_system) or [cartesian equations](https://en.wikipedia.org/wiki/Cartesian_coordinate_system).
+A tool for discovering new CSS polygon shapes generated
+with [css-doodle](https://css-doodle.com) `@shape` function and mathematical expressions.
+The shape is defined with [polar equations](https://en.wikipedia.org/wiki/Polar_coordinate_system) or [cartesian equations](https://en.wikipedia.org/wiki/Cartesian_coordinate_system).
 
 <br/>
 <a href="http://css-doodle.com/shapes">
@@ -13,6 +14,7 @@ The rules can be composed with [polar equations](https://en.wikipedia.org/wiki/P
 * `split`: number between 3 - 2400;
 * `rotate`: number in degree;
 * `scale`: number for scale factor;
+* `origin`: a pair of value for setting coordinate origin;
 * `x`: x coordinate for cartesian equation;
 * `y`: y coordinate for cartesian equation;
 * `r`: polar equation;
@@ -20,7 +22,7 @@ The rules can be composed with [polar equations](https://en.wikipedia.org/wiki/P
 
 ### Operations
 
-* Operations available: `+`, `-`, `*`, `/`, `%`
+* Operations available: `+`, `-`, `*`, `/`, `%`, '^'
 * All JavaScript Math functions and constants can be used. Such as `sin`, `cos`, `tan`, `PI` or `π` etc.
 
 ### Website
