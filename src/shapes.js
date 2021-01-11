@@ -128,6 +128,14 @@ const rules = `
   split: 300;
   scale: .6;
   r: abs(cos(10t)) ^ cos(10t);
+
+
+  split: 200;
+  scale: .75;
+  a: .5 * sin(t + π);
+  b: .2 / 4 * sin(2t - 2π);
+  c: .2 * sin(3t - 2π);
+  r: 1 + .25 * (a + b + c);
 `;
 
 function trim(line) {
