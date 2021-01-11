@@ -19,6 +19,10 @@
         <span>nonzero | evenodd</span>;
       </li>
       <li>
+        <strong>frame</strong>
+        <span>number for frame size</span>;
+      </li>
+      <li>
         <strong>split</strong>
         <span>number between 3 - 2400</span>;
       </li>
