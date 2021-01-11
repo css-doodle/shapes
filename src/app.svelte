@@ -161,9 +161,5 @@
     .graph {
       margin: 4em auto;
     }
-
-    :global(iframe[src*="twitter"]) {
-      display: none;
-    }
   }
 </style>

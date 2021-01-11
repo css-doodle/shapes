@@ -98,16 +98,16 @@ const rules = `
   r: cos(5t)^2 + sin(5t) + .3;
 
 
-	split: 360;
-	a: 1;
-	b: 1;
-	m: 5;
-	n1: 0.3;
-	n2: 0.3;
-	n3: 0.3;
-	p1: abs(1/a * cos(t * m/4)) ^ n2;
-	p2: abs(1/b * sin(t * m/4)) ^ n3;
-	r:  1 / (p1 + p2) ^ (1 / n1);
+  split: 360;
+  a: 1;
+  b: 1;
+  m: 5;
+  n1: 0.3;
+  n2: 0.3;
+  n3: 0.3;
+  p1: abs(1/a * cos(t * m/4)) ^ n2;
+  p2: abs(1/b * sin(t * m/4)) ^ n3;
+  r:  1 / (p1 + p2) ^ (1 / n1);
 
 
   split: 200;
