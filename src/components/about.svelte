@@ -2,16 +2,18 @@
   <article>
     <h1>About</h1>
     <p>
-      This tool is for discovering new CSS polygon shapes generated with <a href="https://css-doodle.com">css-doodle</a>
-      and mathematical functions.
+      This tool is for discovering new CSS polygon shapes generated with
+      <a href="https://css-doodle.com">css-doodle</a> <em>@shape</em> function
+      and mathematical expressions.
     </p>
     <p>
-      The rules can be composed with
+      You can use
       <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system">polar equations</a>
-      or <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">cartesian equations</a>.
+      or <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">cartesian equations</a>
+      to defined a shape.
     </p>
 
-    <h2>Available commands</h2>
+    <h2>Commands</h2>
     <ul>
       <li>
         <strong>fill-rule</strong>
@@ -30,6 +32,10 @@
         <span>number for scale factor</span>;
       </li>
       <li>
+        <strong>origin</strong>
+        <span>a pair of value for setting coordinate origin</span>;
+      </li>
+      <li>
         <strong>x</strong>
         <span>x coordinate for cartesian equation</span>;
       </li>
@@ -43,15 +49,17 @@
       </li>
     </ul>
 
-    <h2>Operations</h2>
+    <h2>Operations in equations</h2>
     <ul>
-      <li>Operations available: <em>+ - * / %</em></li>
+      <li>Operations available: <em>+ - * / % ^</em></li>
       <li>
-        All JavaScript Math functions and constants can be used.
+        All JavaScript Math functions and constants are supported.
         Such as
         <em>sin</em>,
         <em>cos</em>,
         <em>tan</em>,
+        <em>abs</em>,
+        <em>pow</em>,
         <em>PI</em> or <em>π</em> etc.
       </li>
     </ul>
@@ -82,6 +90,14 @@
     padding: 3em 2em;
     margin: 0 auto;
     line-height: 1.6;
+  }
+
+  ul {
+    line-height: 1.4;
+  }
+
+  ul li + li {
+    margin-top: 4px;
   }
 
   h2 {

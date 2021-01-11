@@ -22,8 +22,8 @@ const rules = `
 
 
   split: 300;
-  x: cos(7t) * cos(7t) * sin(2t);
-  y: sin(t) * sin(t) * cos(7t);
+  x: cos(7t)^2 * sin(2t);
+  y: sin(t)^2 * cos(7t);
 
 
   split: 30;
@@ -32,19 +32,19 @@ const rules = `
 
   split: 200;
   x: sin(2t) * sin(3t) * sin(5t);
-  y: cos(t) * cos(8t) * cos(8t);
+  y: cos(t) * cos(8t)^2;
 
 
   fill-rule: evenodd;
   split: 400;
-  x: cos(5t) * cos(5t) * sin(t);
-  y: sin(2t) * sin(2t) * cos(5t);
+  x: cos(5t)^2 * sin(t);
+  y: sin(2t)^2 * cos(5t);
 
 
   fill-rule: evenodd;
   split: 400;
-  y: sin(2t) * sin(4t) * cos(5t);
   x: cos(2t) * cos(5t) * sin(t);
+  y: sin(2t) * sin(4t) * cos(5t);
 
 
   fill-rule: evenodd;
@@ -95,19 +95,19 @@ const rules = `
   fill-rule: evenodd;
   split: 200;
   scale: .6;
-  r: cos(5t) * cos(5t) + sin(5t) + .3;
+  r: cos(5t)^2 + sin(5t) + .3;
 
 
-  split: 360;
-  a: 1;
-  b: 1;
-  m: 5;
-  n1: 0.3;
-  n2: 0.3;
-  n3: 0.3;
-  p1: pow(abs(1/a * cos(t * m/4)), n2);
-  p2: pow(abs(1/b * sin(t * m/4)), n3);
-  r: 1/pow(p1 + p2, 1/n1);
+	split: 360;
+	a: 1;
+	b: 1;
+	m: 5;
+	n1: 0.3;
+	n2: 0.3;
+	n3: 0.3;
+	p1: abs(1/a * cos(t * m/4)) ^ n2;
+	p2: abs(1/b * sin(t * m/4)) ^ n3;
+	r:  1 / (p1 + p2) ^ (1 / n1);
 
 
   split: 200;
@@ -119,11 +119,10 @@ const rules = `
 
   split: 2400;
   scale: .34;
+  origin: 0 1.6;
   rotate: 180;
-  s: sqrt(abs(cos(t))) / (sin(t) + 1.4);
-  R: (2 - 2 * sin(t) + sin(t) * s);
-  x: R * cos(t);
-  y: R * sin(t) + 1.5;
+  s: sqrt(abs(cos(t))) / (sin(t) + 1.6);
+  r: 2 + (s - 2) * sin(t);
 `;
 
 function trim(line) {
