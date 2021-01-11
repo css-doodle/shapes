@@ -32,7 +32,7 @@
   import throttle from 'lodash/throttle';
 
   let graph;
-  let graphColor = '#eee';
+  let graphColor = '#eeeeee';
 
   let editor;
   let mode = 'rule';
