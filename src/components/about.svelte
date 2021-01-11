@@ -10,7 +10,7 @@
       You can use
       <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system">polar equations</a>
       or <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">cartesian equations</a>
-      to defined a shape.
+      to define a shape.
     </p>
 
     <h2>Commands</h2>
