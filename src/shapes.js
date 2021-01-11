@@ -123,6 +123,11 @@ const rules = `
   rotate: 180;
   s: sqrt(abs(cos(t))) / (sin(t) + 1.6);
   r: 2 + (s - 2) * sin(t);
+
+
+  split: 300;
+  scale: .6;
+  r: abs(cos(10t)) ^ cos(10t);
 `;
 
 function trim(line) {
