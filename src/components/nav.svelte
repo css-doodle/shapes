@@ -34,7 +34,7 @@
     collection: false
   };
 
-  function display(name, value) {
+  export function display(name, value) {
     displayFlag[name] = value;
   }
 </script>

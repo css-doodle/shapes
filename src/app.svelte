@@ -3,6 +3,7 @@
     <Graph
       bind:this={graph}
       onColorChange={handleColorChange}
+      onContainerClick={handleContainerClick}
       color={graphColor}
     />
   </div>
@@ -17,7 +18,7 @@
   </div>
 
   <div class="nav">
-    <Nav onSelect={ handleSelect } />
+    <Nav onSelect={ handleSelect } bind:this={nav} />
   </div>
 
 </div>
@@ -36,6 +37,8 @@
 
   let editor;
   let mode = 'rule';
+
+  let nav;
 
   let content = shapes[Math.floor(Math.random() * shapes.length)];
 
@@ -95,6 +98,15 @@
     if (history.replaceState) {
       history.replaceState({}, '', '?');
     }
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  function handleContainerClick() {
+    nav.display('collection', true);
+    history.pushState({}, '', '#collection');
   }
 
   function parseQueryString(str) {

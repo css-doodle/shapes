@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" on:click={onContainerClick}>
   <css-doodle use="var(--bg)" bind:this={doodle}></css-doodle>
 </div>
 
@@ -16,6 +16,7 @@
   import Color from './color.svelte';
   export let color = '#fff';
   export let onColorChange;
+  export let onContainerClick;
 
   let doodle;
   let code = '';;
