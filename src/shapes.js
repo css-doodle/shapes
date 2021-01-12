@@ -17,7 +17,7 @@ const rules = `
   r: sin(2t);
 
 
-  split: 200;
+  split: 300;
   r: cos(4t);
 
 
@@ -34,6 +34,8 @@ const rules = `
   x: sin(2t) * sin(3t) * sin(5t);
   y: cos(t) * cos(8t)^2;
 
+
+  /* css-doodle logo */
 
   fill-rule: evenodd;
   split: 400;
@@ -98,16 +100,15 @@ const rules = `
   r: cos(5t)^2 + sin(5t) + .3;
 
 
+  /* Superformula */
+  /* https://en.wikipedia.org/wiki/Superformula */
+
   split: 360;
-  a: 1;
-  b: 1;
   m: 5;
-  n1: 0.3;
-  n2: 0.3;
-  n3: 0.3;
-  p1: abs(1/a * cos(t * m/4)) ^ n2;
-  p2: abs(1/b * sin(t * m/4)) ^ n3;
-  r:  1 / (p1 + p2) ^ (1 / n1);
+  n: .3;
+  p1: abs(cos(t * m/4)) ^ n;
+  p2: abs(sin(t * m/4)) ^ n;
+  r:  1 / (p1 + p2) ^ (1 / n);
 
 
   split: 200;
@@ -130,13 +131,17 @@ const rules = `
   r: abs(cos(10t)) ^ cos(10t);
 
 
-  split: 200;
+  /* Blob */
+
+  split: 120;
   scale: .7;
   frame: 15;
   r: cos(t/10) ^ sin(t) ^ sin(2t);
 
 
-  split: 200;
+  /* Squircle */
+
+  split: 100;
   scale: .7;
   r: 1/(1-.5*sin(2t)^2)^.25;
 `;
@@ -146,7 +151,7 @@ function trim(line) {
 }
 
 function read(rules) {
-  return rules.split(/\n{2,}/).map(trim);
+  return rules.split(/\n{3,}/).map(trim);
 }
 
 export default read(rules);
