@@ -106,7 +106,9 @@
 
   function handleContainerClick() {
     nav.display('collection', true);
-    history.pushState({}, '', '#collection');
+    if (history.replaceState) {
+      history.replaceState({}, '', '#collection');
+    }
   }
 
   function parseQueryString(str) {

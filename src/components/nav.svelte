@@ -1,6 +1,6 @@
 <ul class="nav">
-  <li><a on:click={() => display('about', true)} href="#about">About</a></li>
-  <li><a on:click={() => display('collection', true)} href="#collection">Collection</a></li>
+  <li><a on:click|preventDefault={() => display('about', true)} href="#about">About</a></li>
+  <li><a on:click|preventDefault={() => display('collection', true)} href="#collection">Collection</a></li>
   <li>
     <a href="https://github.com/css-doodle/shapes" target="_blank" rel="noopener noreferrer" class="external-link">
       <span>GitHub</span>
@@ -36,6 +36,9 @@
 
   export function display(name, value) {
     displayFlag[name] = value;
+    if (history.replaceState) {
+      history.replaceState('', '', '#' + name);
+    }
   }
 </script>
 

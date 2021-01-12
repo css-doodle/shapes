@@ -7,7 +7,7 @@
           <Doodle onClick={select(shape)} shape={shape} delay={150} />
         {/each}
       </div>
-      <Back on:click={handleBack} />
+      <Back onClose={handleBack} />
     </div>
   </div>
 </Popup>
@@ -20,8 +20,8 @@
 
   export let onClose;
   export let onSelect;
-  let popup;
 
+  let popup;
   let delay = 200;
 
   function handleBack(e) {

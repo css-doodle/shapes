@@ -2,7 +2,7 @@
 <div class="container" bind:this={ref}>
   <div class="body">
     <slot></slot>
-    <a href="#" class="close" on:click={handleClose}>
+    <a href="#" class="close" on:click|preventDefault={handleClose}>
       <svg viewBox="0 0 10 10">
         <g stroke="currentColor" stroke-width=".5">
           <line x1="1" y1="1" x2="9" y2="9" />
@@ -22,18 +22,12 @@
   export let onOpen = null;
 
   let ref;
-  let shown = false;
-
-  $: if (display) {
-    setTimeout(() => shown = true, 200);
-  }
 
   export function handleClose(e) {
     display = false;
-    shown = false;
     if (typeof onClose == 'function') onClose();
-    if (e) {
-      e.stopPropagation();
+    if (history.replaceState) {
+      history.replaceState('', '', '#');
     }
   }
 
@@ -46,7 +40,6 @@
   function handleESC(e) {
     if(e.key === "Escape") {
       handleClose(e);
-      location.hash = '';
     }
   }
 
