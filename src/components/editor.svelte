@@ -56,7 +56,7 @@
       onToggle(name);
     }
     if (toggleMode == 'css') {
-      editor.setOption('readOnly', 'nocursor');
+      editor.setOption('readOnly', true);
     } else {
       editor.setOption('readOnly', '');
       triggerChange = true;
