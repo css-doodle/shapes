@@ -36,8 +36,8 @@
 
   export function display(name, value) {
     displayFlag[name] = value;
-    if (history.replaceState) {
-      history.replaceState('', '', '#' + name);
+    if (history.pushState) {
+      history.pushState('', '', '#' + name);
     }
   }
 </script>

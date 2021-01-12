@@ -1,4 +1,4 @@
-<div class="container" on:click={onContainerClick}>
+<div class="container" on:click|preventDefault={onContainerClick}>
   <css-doodle use="var(--bg)" bind:this={doodle}></css-doodle>
 </div>
 

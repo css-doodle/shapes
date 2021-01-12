@@ -105,10 +105,8 @@
   }
 
   function handleContainerClick() {
+    console.log('click');
     nav.display('collection', true);
-    if (history.replaceState) {
-      history.replaceState({}, '', '#collection');
-    }
   }
 
   function parseQueryString(str) {
