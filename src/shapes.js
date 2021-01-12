@@ -131,11 +131,9 @@ const rules = `
 
 
   split: 200;
-  scale: .75;
-  a: .5 * sin(t + π);
-  b: .2 / 4 * sin(2t - 2π);
-  c: .2 * sin(3t - 2π);
-  r: 1 + .25 * (a + b + c);
+  scale: .7;
+  frame: 15;
+  r: cos(t/10) ^ sin(t) ^ sin(2t);
 `;
 
 function trim(line) {
