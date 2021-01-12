@@ -24,7 +24,7 @@
       </li>
       <li>
         <strong>split</strong>
-        <span>number between 3 - 2400</span>;
+        <span>number between 3 - 3600</span>;
       </li>
       <li>
         <strong>degree</strong>
