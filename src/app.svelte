@@ -105,7 +105,6 @@
   }
 
   function handleContainerClick() {
-    console.log('click');
     nav.display('collection', true);
   }
 
