@@ -95,7 +95,6 @@
     font-size: 2em;
   }
   article {
-    font-size: 1.2em;
     max-width: 40em;
     padding: 3em 2em;
     margin: 0 auto;
