@@ -48,7 +48,7 @@
 
   .collection {
     margin: auto;
-    padding-bottom: 2em;
+    padding-bottom: 3em;
   }
 
   h2 {
