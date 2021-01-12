@@ -115,12 +115,12 @@
     font-size: 1.2em;
   }
 
-  :global(.cm-s-monokai.CodeMirror) {
-    background: rgba(255, 255, 255, .07);
-  }
-
   :global(.cm-s-monokai span.cm-tag) {
     color: #a6e22e;
+  }
+
+  :global(.cm-s-monokai.CodeMirror) {
+    background: var(--color-editor-bg);
   }
 
   .toggler {

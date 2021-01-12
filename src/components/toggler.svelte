@@ -24,7 +24,7 @@
     top: 0;
     color: var(--color-test);
     padding: 6px 6px;
-    background: rgba(255, 255, 255, .1);
+    background: var(--color-toggle-bg);
     border-radius: 0 5px;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@
   }
 
   .toggler:hover {
-    background: rgba(255, 255, 255, .15);
+    background: var(--color-toggle-bg-active);
     color: var(--color-main);
   }
 

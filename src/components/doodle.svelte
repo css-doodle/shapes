@@ -34,12 +34,13 @@
     --basic: (
       :doodle {
         --c: var(--color-shape);
+        --bg: var(--color-shape-bg);
+        background: var(--color-shape-bg);
       }
       :doodle(:hover) {
         --c: var(--color-emphasis);
         box-shadow: inset 0 0 0 1px var(--color-main);
       }
-      background: rgba(255, 255, 255, .1);
     );
   }
 
