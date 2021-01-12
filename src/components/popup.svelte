@@ -61,11 +61,13 @@
     handleOpen();
     document.addEventListener('keyup', handleESC);
     window.addEventListener('hashchange', handleHashChange);
+    document.body.classList.add('noscroll');
   });
 
   onDestroy(() => {
     document.removeEventListener('keyup', handleESC);
     window.removeEventListener('hashchange', handleHashChange);
+    document.body.classList.remove('noscroll');
   });
 </script>
 
@@ -85,6 +87,10 @@
 
   .body {
     height: 100%;
+  }
+
+  :global(.noscroll) {
+    overflow: hidden;
   }
 
   @keyframes slide-up {

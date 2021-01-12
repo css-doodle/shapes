@@ -67,6 +67,13 @@
       </li>
     </ul>
 
+    <h2>Variables</h2>
+    <div class="detail">
+      <p>
+        Everything declared is considered variables.
+      </p>
+    </div>
+
     <Back onClose={handleBack} />
   </article>
 </Popup>
@@ -93,6 +100,10 @@
     padding: 3em 2em;
     margin: 0 auto;
     line-height: 1.6;
+  }
+
+  .detail {
+    margin-left: 2em;
   }
 
   ul {
