@@ -70,7 +70,7 @@
     <h2>Variables</h2>
     <div class="detail">
       <p>
-        Everything declared is considered variables.
+        Everything declared is considered variable.
       </p>
     </div>
 
