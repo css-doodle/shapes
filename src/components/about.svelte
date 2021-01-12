@@ -27,8 +27,8 @@
         <span>number between 3 - 2400</span>;
       </li>
       <li>
-        <strong>rotate</strong>
-        <span>number in degree</span>;
+        <strong>degree</strong>
+        <span>number in degree for rotation</span>;
       </li>
       <li>
         <strong>scale</strong>
