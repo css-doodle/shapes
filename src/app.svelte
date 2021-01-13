@@ -51,15 +51,18 @@
     light: '#222222'
   };
 
+  let excludedColor = {
+    light: ['#ffffff', '#fff', '#eee', '#eeeeee'],
+    dark: ['#000000', '#000', '#222222', '#222']
+  };
+
   let nav;
   let content = shapes[Math.floor(Math.random() * shapes.length)];
 
   $: graphColor = setGraphColor(theme);
   function setGraphColor(theme) {
     let { _, color } = parseQueryString(location.search);
-    let defaultColor = colors[theme === 'dark' ? 'light' : 'dark'];
-    let oldDefaultColor = theme === 'dark' ? '#ffffff' : '#000000';
-    if (color && (defaultColor !== color && oldDefaultColor !== color)) {
+    if (color && !excludedColor[theme].includes(color)) {
       return color;
     } else {
       return colors[theme];
