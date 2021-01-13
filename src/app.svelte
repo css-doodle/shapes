@@ -57,7 +57,9 @@
   $: graphColor = setGraphColor(theme);
   function setGraphColor(theme) {
     let { _, color } = parseQueryString(location.search);
-    if (color && colors[theme == 'dark' ? 'light' : 'dark'] !== color) {
+    let defaultColor = colors[theme === 'dark' ? 'light' : 'dark'];
+    let oldDefaultColor = theme === 'dark' ? '#ffffff' : '#000000';
+    if (color && (defaultColor !== color && oldDefaultColor !== color)) {
       return color;
     } else {
       return colors[theme];
