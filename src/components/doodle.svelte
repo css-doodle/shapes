@@ -34,12 +34,13 @@
     --basic: (
       :doodle {
         --c: var(--color-shape);
+        --bg: var(--color-shape-bg);
+        background: var(--color-shape-bg);
       }
       :doodle(:hover) {
         --c: var(--color-emphasis);
         box-shadow: inset 0 0 0 1px var(--color-main);
       }
-      background: rgba(255, 255, 255, .1);
     );
   }
 
@@ -47,6 +48,13 @@
     css-doodle {
       width: 80px;
       height: 80px;
+    }
+  }
+
+  @media screen and (max-width:24em) {
+    css-doodle {
+      width: 70px;
+      height: 70px;
     }
   }
 </style>

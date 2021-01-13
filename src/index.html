@@ -8,6 +8,12 @@
   <title>Discover CSS polygon shapes</title>
 </head>
 <body>
+  <script>
+    (function() {
+      let theme = localStorage.getItem('theme');
+      if (theme) document.body.setAttribute('theme', theme);
+    }());
+  </script>
   <div id="app"></div>
 </body>
 </html>

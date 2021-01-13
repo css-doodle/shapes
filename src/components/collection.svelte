@@ -81,6 +81,11 @@
   }
   @media screen and (max-width: 24em) {
     .list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media screen and (max-width: 21em) {
+    .list {
       grid-template-columns: repeat(3, 1fr);
     }
   }

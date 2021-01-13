@@ -1,4 +1,9 @@
 <div class="container">
+
+  <div class="theme-switcher">
+    <ThemeSwitcher {theme} onClick={handleThemeChange} />
+  </div>
+
   <div class="graph">
     <Graph
       bind:this={graph}
@@ -28,22 +33,38 @@
   import Graph from './components/graph.svelte';
   import Editor from './components/editor.svelte';
   import Nav from './components/nav.svelte';
+  import ThemeSwitcher from './components/theme-switcher.svelte';
+
   import shapes from './shapes';
+  import Theme from './theme';
 
   import throttle from 'lodash/throttle';
 
-  let graph;
-  let graphColor = '#eeeeee';
+  let theme = Theme.getTheme();
 
+  let graph;
   let editor;
   let mode = 'rule';
 
-  let nav;
+  let colors = {
+    dark: '#eeeeee',
+    light: '#222222'
+  };
 
+  let nav;
   let content = shapes[Math.floor(Math.random() * shapes.length)];
 
-  let updateHash = throttle(_updateHash, 500);
+  $: graphColor = setGraphColor(theme);
+  function setGraphColor(theme) {
+    let { _, color } = parseQueryString(location.search);
+    if (color && colors[theme == 'dark' ? 'light' : 'dark'] !== color) {
+      return color;
+    } else {
+      return colors[theme];
+    }
+  }
 
+  let updateHash = throttle(_updateHash, 500);
   function _updateHash(value, color) {
     if (history.replaceState && value.length) {
       history.replaceState({}, '',
@@ -54,7 +75,6 @@
   }
 
   let updateCSSEditor = throttle(_updateCSSEditor, 500);
-
   function _updateCSSEditor() {
     let value = graph.getShapeStyle();
     editor.update(value, { triggerChange: false });
@@ -118,11 +138,23 @@
     return ret;
   }
 
+  function handleThemeChange(value) {
+    theme = value;
+    Theme.saveTheme(value);
+  }
+
   onMount(() => {
+    Theme.writeAttribute();
+    Theme.onChange(data => {
+      if (data.type === 'local') {
+        theme = data.theme;
+        Theme.writeAttribute();
+      } else {
+        theme = Theme.getTheme();
+      }
+    });
+
     let { rule, color } = parseQueryString(location.search);
-    if (color) {
-      graphColor = color;
-    }
     if (rule) {
       handleChange(rule, true);
       editor.update(rule);
@@ -136,7 +168,6 @@
   .container {
     height: 100%;
     padding-top: 9em;
-
     display: flex;
     flex-direction: column;
   }
@@ -160,6 +191,13 @@
     padding-top: 5em;
   }
 
+  .theme-switcher {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+  }
+
   @media screen and (max-width: 26.25em) {
     .container {
       padding: 0;
@@ -170,7 +208,7 @@
       max-width: 95%;
     }
     .graph {
-      margin: 4em auto;
+      margin: 4.5em auto;
     }
   }
 </style>

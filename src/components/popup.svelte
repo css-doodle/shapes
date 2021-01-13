@@ -71,11 +71,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: var(--color-bg);
     z-index: 9;
     overflow: auto;
     animation: slide-up .3s cubic-bezier(0.19, 1, 0.22, 1);
-    will-change: transform;
   }
 
   .body {
@@ -104,7 +103,7 @@
     z-index: 3;
     cursor: pointer;
     line-height: 0;
-    color: var(--color-emphasis);
+    color: var(--color-main);
     transform: rotate(45deg);
     animation: rotate .2s;
     opacity: 0;

@@ -10,22 +10,107 @@ html, body, #app {
   height: 100%;
 }
 
-:root {
+body {
   --color-bg: #000;
-  --color-text: rgba(255, 255, 255, .7);
   --color-title: #fff;
   --color-emphasis: #fff;
   --color-main: #ffc107;
-  --color-link-active: rgba(255, 255, 255, .2);
-  --color-shape-bg: rgba(255, 255, 255, .1);
-  --color-shape: rgba(255, 255, 255, .85);
-  --color-button-border: rgba(255, 255, 255, .2);
+  --color-rgb: 255, 255, 255;
+  --color-border-focus: #57596B;
+
+  --color-text: rgba(var(--color-rgb), .7);
+  --color-link-active: rgba(var(--color-rgb), .2);
+  --color-shape-bg: rgba(var(--color-rgb), .1);
+  --color-shape: rgba(var(--color-rgb), .85);
+  --color-button-border: rgba(var(--color-rgb), .2);
+  --color-editor-bg: rgba(var(--color-rgb), .07);
+
+  --color-toggle-bg: rgba(var(--color-rgb), .1);
+  --color-toggle-bg-active: rgba(var(--color-rgb), .15);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --color-bg: #fff;
+    --color-title: #000;
+    --color-emphasis: #000;
+    --color-main: #ff5722;
+    --color-rgb: 0, 0, 0;
+    --color-border-focus: #c5c5c5;
+
+    --color-link-active: rgba(255, 87, 34, .08);
+    --color-toggle-bg-active: rgba(255, 87, 34, .08);
+    --color-toggle-bg: rgba(var(--color-rgb), .05);
+    --color-shape-bg: rgba(var(--color-rgb), .05);
+    --color-shape: rgba(var(--color-rgb), .8);
+    --color-editor-bg: rgba(var(--color-rgb), .05);
+  }
+  .CodeMirror-code,
+  .CodeMirror-cursors {
+    filter: invert(1);
+  }
+  .CodeMirror-selected {
+    opacity: .1;
+  }
+}
+
+
+body[theme="dark"] {
+  --color-bg: #000;
+  --color-title: #fff;
+  --color-emphasis: #fff;
+  --color-main: #ffc107;
+  --color-rgb: 255, 255, 255;
+  --color-border-focus: #57596B;
+
+  --color-text: rgba(var(--color-rgb), .7);
+  --color-link-active: rgba(var(--color-rgb), .2);
+  --color-shape-bg: rgba(var(--color-rgb), .1);
+  --color-shape: rgba(var(--color-rgb), .85);
+  --color-button-border: rgba(var(--color-rgb), .2);
+  --color-editor-bg: rgba(var(--color-rgb), .07);
+
+  --color-toggle-bg: rgba(var(--color-rgb), .1);
+  --color-toggle-bg-active: rgba(var(--color-rgb), .15);
+}
+
+body[theme="dark"] .CodeMirror-code,
+body[theme="dark"] .CodeMirror-cursors {
+  filter: none;
+}
+body[theme="dark"] .CodeMirror-selected {
+  opacity: 1;
+}
+
+body[theme="light"] {
+  --color-bg: #fff;
+  --color-title: #000;
+  --color-emphasis: #000;
+  --color-main: #ff5722;
+  --color-rgb: 0, 0, 0;
+  --color-border-focus: #c5c5c5;
+
+  --color-link-active: rgba(255, 87, 34, .08);
+  --color-toggle-bg-active: rgba(255, 87, 34, .08);
+  --color-toggle-bg: rgba(var(--color-rgb), .05);
+  --color-shape-bg: rgba(var(--color-rgb), .05);
+  --color-shape: rgba(var(--color-rgb), .8);
+  --color-editor-bg: rgba(var(--color-rgb), .05);
+}
+
+body[theme="light"] .CodeMirror-code,
+body[theme="light"] .CodeMirror-cursors {
+  filter: invert(1);
+}
+body[theme="light"] .CodeMirror-selected {
+  opacity: .1;
 }
 
 body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: system-ui;
+  transition: .2s ease;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -40,7 +125,6 @@ a:hover, a:active {
 }
 
 h1, h2 {
-  font-weight: normal;
   color: var(--color-title);
 }
 
@@ -52,6 +136,8 @@ button[reset] {
   margin: 0;
   cursor: pointer;
   line-height: 1;
+  -webkit-touch-callout: none;
+  touch-action: none;
 }
 
 button:focus:not(:focus-visible) {

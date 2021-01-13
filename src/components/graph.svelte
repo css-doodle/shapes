@@ -78,7 +78,10 @@
     width: 310px; height: 310px;
     display: grid;
     place-items: center;
-    --lg: linear-gradient(#57596B, #57596B);
+    --lg: linear-gradient(
+      var(--color-border-focus),
+      var(--color-border-focus)
+    );
     background:
       var(--lg) 0 0 / 1px 10px,
       var(--lg) 0 0 / 10px 1px,
@@ -89,7 +92,7 @@
       var(--lg) 100% 100% / 1px 10px,
       var(--lg) 100% 100% / 10px 1px;
     background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 1px rgba(255,255, 255, .1);
+    box-shadow: inset 0 0 0 1px var(--color-shape-bg);
   }
 
   css-doodle {
