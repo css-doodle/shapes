@@ -1,5 +1,11 @@
 <div class="container" on:click|preventDefault={onContainerClick}>
   <css-doodle use="var(--bg)" bind:this={doodle}></css-doodle>
+  <svg viewBox="0 0 300 300">
+    <path
+      stroke-width="1.5" fill="none"
+      d="M0 10 L0 0 L10 0 M290 0 L300 0 L300 10 M300 290 L300 300 L290 300 M10 300 L0 300 L0 290"
+    />
+  </svg>
 </div>
 
 <div class="control">
@@ -78,31 +84,28 @@
     width: 310px; height: 310px;
     display: grid;
     place-items: center;
-    --lg: linear-gradient(
-      var(--color-border-focus),
-      var(--color-border-focus)
-    );
-    background:
-      var(--lg) 0 0 / 1px 10px,
-      var(--lg) 0 0 / 10px 1px,
-      var(--lg) 100% 0 / 1px 10px,
-      var(--lg) 100% 0 / 10px 1px,
-      var(--lg) 0 100% / 1px 10px,
-      var(--lg) 0 100% / 10px 1px,
-      var(--lg) 100% 100% / 1px 10px,
-      var(--lg) 100% 100% / 10px 1px;
-    background-repeat: no-repeat;
+    position: relative;
     box-shadow: inset 0 0 0 1px var(--color-shape-bg);
+  }
+
+  .container css-doodle {
+    padding: 5px;
+  }
+
+  .container svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    stroke: var(--color-border-focus);
   }
 
   css-doodle {
     width: 100%;
     height: 100%;
-    padding: 5px;
     --bg: (
       transition: clip-path .2s ease;
     );
-
     --rain: (
       :doodle {
         @grid: 25x1 / 100%;
