@@ -126,9 +126,10 @@ const rules = `
   r: 2 + (s - 2) * sin(t);
 
 
-  split: 300;
+  split: 400;
   scale: .6;
-  r: abs(cos(10t)) ^ cos(10t);
+  frame: 40;
+  r: abs(cos(9t)) ^ cos(9t);
 
 
   /* Blob */
