@@ -106,8 +106,8 @@ const rules = `
   split: 360;
   m: 5;
   n: .3;
-  p1: abs(cos(t * m/4)) ^ n;
-  p2: abs(sin(t * m/4)) ^ n;
+  p1: abs.cos(t * m/4) ^ n;
+  p2: abs.sin(t * m/4) ^ n;
   r:  1 / (p1 + p2) ^ (1 / n);
 
 
@@ -122,14 +122,14 @@ const rules = `
   scale: .34;
   origin: 0 -1.6;
   degree: 180;
-  s: sqrt(abs(cos(t))) / (sin(t) + 1.6);
+  s: sqrt.abs.cos(t) / (sin(t) + 1.6);
   r: 2 + (s - 2) * sin(t);
 
 
   split: 400;
   scale: .6;
   frame: 40;
-  r: abs(cos(9t)) ^ cos(9t);
+  r: abs.cos(9t) ^ cos(9t);
 
 
   /* Blob */
