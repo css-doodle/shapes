@@ -165,5 +165,3 @@ button[reset] {
 button:focus:not(:focus-visible) {
   outline: 0;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
