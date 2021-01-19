@@ -105,6 +105,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    box-shadow: var(--editor-shadow);
   }
 
   :global(.CodeMirror) {
@@ -112,7 +113,8 @@
     padding: 1em;
     line-height: 1.6;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 1em;
+    font-family: 'PT Mono', monospace, serif;
   }
 
   :global(.cm-s-monokai span.cm-tag) {

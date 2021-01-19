@@ -9,8 +9,8 @@ const rules = `
 
   split: 100;
   scale: .4;
-  y: cos(1t) + cos(2t) * 1.2 - .3;
   x: sin(2t) + sin(t) * 1.2;
+  y: cos(1t) + cos(2t) * 1.2 - .3;
 
 
   split: 200;
@@ -22,15 +22,15 @@ const rules = `
 
 
   split: 300;
-  x: cos(7t)^2 * sin(2t);
-  y: sin(t)^2 * cos(7t);
+  scale: .7;
+  r: cos.cos.cos.cos.cos(7t) ^ cos(7t);
 
 
   split: 30;
   r: cos(4t) * sin(2t);
 
 
-  split: 200;
+  split: 400;
   x: sin(2t) * sin(3t) * sin(5t);
   y: cos(t) * cos(8t)^2;
 
@@ -88,8 +88,9 @@ const rules = `
   y: sin(2t) - sin(5t) - sin(t);
 
 
-  split: 200;
-  scale: .4;
+  split: 300;
+  scale: .35;
+  rotate: 45;
   x: sin(t) + cos(7t) + cos(2t) + .35;
   y: cos(4t) + sin(4t) + sin(t);
 

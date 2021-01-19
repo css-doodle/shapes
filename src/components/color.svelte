@@ -29,6 +29,7 @@
     width: 48px;
     height: 24px;
     border: 1px solid var(--color-button-border);
+    background: var(--color-button-bg);
     cursor: pointer;
     transition: border-color .2s ease;
     position: relative;

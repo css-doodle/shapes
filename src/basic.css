@@ -23,27 +23,35 @@ body {
   --color-shape-bg: rgba(var(--color-rgb), .1);
   --color-shape: rgba(var(--color-rgb), .85);
   --color-button-border: rgba(var(--color-rgb), .2);
+  --color-button-bg: transparent;
   --color-editor-bg: rgba(var(--color-rgb), .07);
+  --color-graph-border: rgba(var(--color-rgb), .1);
+  --graph-bg: transparent;
 
   --color-toggle-bg: rgba(var(--color-rgb), .1);
   --color-toggle-bg-active: rgba(var(--color-rgb), .15);
+  --editor-shadow: none;
 }
 
 @media (prefers-color-scheme: light) {
   body {
-    --color-bg: #fff;
+    --color-bg: #f1f3f4;
     --color-title: #000;
     --color-emphasis: #000;
     --color-main: #ff5722;
     --color-rgb: 0, 0, 0;
-    --color-border-focus: #d0d0d0;
+    --color-border-focus: #e0e0e0;
+    --color-button-bg: #fff;
 
     --color-link-active: rgba(255, 87, 34, .08);
     --color-toggle-bg-active: rgba(255, 87, 34, .08);
-    --color-toggle-bg: rgba(var(--color-rgb), .05);
-    --color-shape-bg: rgba(var(--color-rgb), .05);
+    --color-toggle-bg: rgba(var(--color-rgb), .1);
+    --color-shape-bg: #ffffff;
     --color-shape: rgba(var(--color-rgb), .8);
-    --color-editor-bg: rgba(var(--color-rgb), .05);
+    --color-editor-bg: #ffffff;
+    --color-graph-border: rgba(var(--color-rgb), .03);
+    --editor-shadow: 0 5px 10px rgba(0, 0, 0, .05);
+    --graph-bg: radial-gradient(#fff 80%, #f1f2f3);
   }
   .CodeMirror-code,
   .CodeMirror-cursors {
@@ -68,10 +76,14 @@ body[theme="dark"] {
   --color-shape-bg: rgba(var(--color-rgb), .1);
   --color-shape: rgba(var(--color-rgb), .85);
   --color-button-border: rgba(var(--color-rgb), .2);
+  --color-button-bg: transparent;
   --color-editor-bg: rgba(var(--color-rgb), .07);
+  --color-graph-border: rgba(var(--color-rgb), .08);
+  --graph-bg: transparent;
 
   --color-toggle-bg: rgba(var(--color-rgb), .1);
   --color-toggle-bg-active: rgba(var(--color-rgb), .15);
+  --editor-shadow: none;
 }
 
 body[theme="dark"] .CodeMirror-code,
@@ -83,19 +95,23 @@ body[theme="dark"] .CodeMirror-selected {
 }
 
 body[theme="light"] {
-  --color-bg: #fff;
+  --color-bg: #f1f3f4;
   --color-title: #000;
   --color-emphasis: #000;
   --color-main: #ff5722;
   --color-rgb: 0, 0, 0;
-  --color-border-focus: #d0d0d0;
+  --color-border-focus: #e0e0e0;
+  --color-button-bg: #fff;
 
   --color-link-active: rgba(255, 87, 34, .08);
   --color-toggle-bg-active: rgba(255, 87, 34, .08);
-  --color-toggle-bg: rgba(var(--color-rgb), .05);
-  --color-shape-bg: rgba(var(--color-rgb), .05);
+  --color-toggle-bg: rgba(var(--color-rgb), .04);
+  --color-shape-bg: #ffffff;
   --color-shape: rgba(var(--color-rgb), .8);
-  --color-editor-bg: rgba(var(--color-rgb), .05);
+  --color-editor-bg: #ffffff;
+  --color-graph-border: transparent;
+  --editor-shadow: 0 5px 10px rgba(0, 0, 0, .05);
+  --graph-bg: radial-gradient(#fff 80%, #f1f2f3);
 }
 
 body[theme="light"] .CodeMirror-code,
@@ -109,9 +125,15 @@ body[theme="light"] .CodeMirror-selected {
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: system-ui;
-  transition: .2s ease;
   -webkit-font-smoothing: antialiased;
+}
+
+body, button {
+  font-family: system-ui;
+}
+
+.ready {
+  transition: .2s ease;
 }
 
 a {
@@ -143,3 +165,5 @@ button[reset] {
 button:focus:not(:focus-visible) {
   outline: 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');

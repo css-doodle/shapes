@@ -166,6 +166,8 @@
     } else {
       handleChange(content, true);
     }
+
+    document.body.classList.add('ready');
   });
 </script>
 
@@ -188,7 +190,7 @@
   }
 
   .graph {
-    margin: 0 auto 7em;
+    margin: 0 auto 6em;
   }
 
   .nav {

@@ -29,14 +29,14 @@
   .toggle {
     border-radius: 50%;
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: 20px;
+    height: 20px;
     transition: .2s ease;
     position: relative;
   }
 
   .light {
-    box-shadow: inset .9em 0 0 #333;
+    box-shadow: inset 12px 0 0 #333;
     transform: rotate(-30deg);
     animation: move_moon .4s ease;
     animation-fill-mode: both;

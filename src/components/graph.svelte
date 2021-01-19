@@ -81,15 +81,16 @@
 
 <style>
   .container {
-    width: 310px; height: 310px;
+    width: 320px; height: 320px;
     display: grid;
     place-items: center;
     position: relative;
-    box-shadow: inset 0 0 0 1px var(--color-shape-bg);
+    box-shadow: inset 0 0 0 1px var(--color-graph-border);
+    background: var(--graph-bg);
   }
 
   .container css-doodle {
-    padding: 5px;
+    padding: 10px;
   }
 
   .container svg {
@@ -127,7 +128,7 @@
   }
 
   .control {
-    margin-top: 10px;
+    margin-top: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,6 +139,7 @@
     transition: .2s ease;
     height: 24px;
     border: 1px solid var(--color-button-border);
+    background: var(--color-button-bg);
     line-height: 0;
     width: 48px;
     text-align: center;
