@@ -11,7 +11,7 @@ html, body, #app {
 }
 
 body {
-  --color-bg: #000;
+  --color-bg: #060a11;
   --color-title: #fff;
   --color-emphasis: #fff;
   --color-main: #ffc107;
@@ -64,7 +64,7 @@ body {
 
 
 body[theme="dark"] {
-  --color-bg: #000;
+  --color-bg: #060a11;
   --color-title: #fff;
   --color-emphasis: #fff;
   --color-main: #ffc107;
