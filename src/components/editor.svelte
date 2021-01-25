@@ -69,6 +69,7 @@
     } else {
       triggerChange = true;
     }
+    editor.setOption('readOnly', '');
     editor.setValue(value.trim());
     editor.clearHistory();
   }

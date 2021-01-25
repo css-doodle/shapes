@@ -15,15 +15,15 @@
 
   <div class="editor" class:fixed={mode == 'css'}>
     <Editor
-      content={ content }
-      onChange={ handleChange }
-      onToggle={ handleToggle }
-      bind:this={ editor }
+      content={content}
+      onChange={handleChange}
+      onToggle={handleToggle}
+      bind:this={editor}
     />
   </div>
 
   <div class="nav">
-    <Nav onSelect={ handleSelect } bind:this={nav} />
+    <Nav onSelect={handleSelect} bind:this={nav} />
   </div>
 
 </div>
