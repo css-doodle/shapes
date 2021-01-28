@@ -65,7 +65,7 @@ const rules = `
 
   split: 200;
   scale: .3;
-  degree: 30;
+  rotate: 30;
   x: 2 * cos(3t) + cos(t);
   y: 2 * sin(t) + sin(2t);
 
@@ -83,7 +83,7 @@ const rules = `
 
   split: 200;
   scale: .35;
-  degree: -90;
+  rotate: -90;
   x: cos(t) - cos(2t) - cos(4t) + .5;
   y: sin(2t) - sin(5t) - sin(t);
 
@@ -114,7 +114,7 @@ const rules = `
 
   split: 200;
   scale: .3;
-  degree: 180;
+  rotate: 180;
   x: sin(4t) + sin(t) * 1.6;
   y: cos(t) + cos(t) * 4.8 + .3;
 
@@ -122,7 +122,7 @@ const rules = `
   split: 2400;
   scale: .34;
   origin: 0 -1.6;
-  degree: 180;
+  rotate: 180;
   s: sqrt.abs.cos(t) / (sin(t) + 1.6);
   r: 2 + (s - 2) * sin(t);
 

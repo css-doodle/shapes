@@ -27,7 +27,7 @@
         <span>number between 3 - 3600</span>;
       </li>
       <li>
-        <strong>degree</strong>
+        <strong>rotate</strong>
         <span>number in degree for rotation</span>;
       </li>
       <li>
