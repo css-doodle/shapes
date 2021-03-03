@@ -208,7 +208,7 @@ button:focus:not(:focus-visible) {
 }
 
 .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
-  background-color: transparent; /* The little square between H and V scrollbars */
+  background-color: white; /* The little square between H and V scrollbars */
 }
 
 /* GUTTER */

@@ -8,7 +8,7 @@ module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
+    filename: '[name].[fullhash].js',
   },
   resolve: {
     mainFields: ['svelte', 'browser', 'module', 'main'],
@@ -48,7 +48,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
+      filename: '[name].[fullhash].css',
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
