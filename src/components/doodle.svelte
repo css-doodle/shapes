@@ -1,6 +1,6 @@
 <css-doodle
   on:click={onClick}
-  bind:this={doodle}
+  use:doodle={rules}
   use="var(--basic)"
 />
 
@@ -9,18 +9,21 @@
   export let shape;
   export let delay = 0;
 
-  let doodle;
+  $: rules = `
+    :doodle {
+      background: var(--color-shape-bg);
+    }
+    clip-path: @shape(${shape});
+    background: @var(--c);
+  `;
 
-  $: if (shape) {
-    setTimeout(() => {
-      doodle.update(`
-        :doodle {
-          background: var(--color-shape-bg);
-        }
-        clip-path: @shape(${shape});
-        background: @var(--c);
-      `);
-    }, delay);
+  function doodle(element, rules) {
+    setTimeout(() => element.update(rules), delay);
+    return {
+      update(newRules) {
+        element.update(newRules);
+      }
+    }
   }
 </script>
 

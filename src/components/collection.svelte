@@ -4,7 +4,7 @@
       <h2>Select to edit</h2>
       <div class="list">
         {#each shapes as shape, i}
-          <Doodle onClick={select(shape)} shape={shape} delay={150} />
+          <Doodle onClick={select(shape)} shape={shape} {delay} />
         {/each}
       </div>
       <Back onClose={handleBack} />
@@ -22,7 +22,7 @@
   export let onSelect;
 
   let popup;
-  let delay = 200;
+  let delay = 150;
 
   function handleBack(e) {
     popup.handleClose(e);
