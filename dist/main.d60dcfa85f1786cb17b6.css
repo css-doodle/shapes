@@ -40,7 +40,7 @@ body {
     --color-emphasis: #000;
     --color-main: #ff5722;
     --color-rgb: 0, 0, 0;
-    --color-border-focus: #e0e0e0;
+    --color-border-focus: rgba(255, 255, 255, 0);
     --color-button-bg: #fff;
 
     --color-link-active: rgba(255, 87, 34, .08);
@@ -100,7 +100,7 @@ body[theme="light"] {
   --color-emphasis: #000;
   --color-main: #ff5722;
   --color-rgb: 0, 0, 0;
-  --color-border-focus: #e0e0e0;
+  --color-border-focus: rgba(255, 255, 255, 0);
   --color-button-bg: #fff;
 
   --color-link-active: rgba(255, 87, 34, .08);
