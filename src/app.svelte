@@ -57,7 +57,7 @@
   };
 
   let nav;
-  let content = shapes[Math.floor(Math.random() * shapes.length)];
+  let content = shapes[Math.floor(Math.random() * shapes.length)].value;
 
   $: graphColor = setGraphColor(theme);
   function setGraphColor(theme) {

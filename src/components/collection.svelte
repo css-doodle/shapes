@@ -4,7 +4,7 @@
       <h2>Select to edit</h2>
       <div class="list">
         {#each shapes as shape, i}
-          <Doodle onClick={select(shape)} shape={shape} {delay} />
+          <Doodle onClick={select(shape.value)} shape={shape.value} {delay} />
         {/each}
       </div>
       <Back onClose={handleBack} />
@@ -61,7 +61,7 @@
     margin: auto;
     display: grid;
     gap: 1vmin;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     margin-bottom: 2em;
   }
 

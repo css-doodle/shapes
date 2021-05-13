@@ -23,7 +23,7 @@
         <span>number for frame size</span>;
       </li>
       <li>
-        <strong>split</strong>
+        <strong>points</strong>
         <span>number between 3 - 3600</span>;
       </li>
       <li>
@@ -37,6 +37,10 @@
       <li>
         <strong>origin</strong>
         <span>a pair of value for setting coordinate origin</span>;
+      </li>
+      <li>
+        <strong>turn</strong>
+        <span>the angle between start/end point, defaults to be 1</span>;
       </li>
       <li>
         <strong>x</strong>
