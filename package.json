@@ -19,7 +19,7 @@
   "homepage": "https://github.com/css-doodle/shapes#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.0.1",
+    "css-loader": "^5.2.4",
     "html-loader": "^2.1.1",
     "html-webpack-plugin": "^4.5.1",
     "mini-css-extract-plugin": "^1.3.9",

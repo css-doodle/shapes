@@ -40,7 +40,7 @@
       </li>
       <li>
         <strong>turn</strong>
-        <span>the angle between start/end point, defaults to be 1</span>;
+        <span>angle between start/end point, defaults to be 1</span>;
       </li>
       <li>
         <strong>x</strong>
