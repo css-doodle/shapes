@@ -67,19 +67,18 @@
 
   @media screen and (max-width: 47.5em) {
     .list {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
     }
   }
   @media screen and (max-width: 33.2em) {
     .list {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
-
     .collection {
       margin-top: 4em;
     }
   }
-  @media screen and (max-width: 24em) {
+  @media screen and (max-width: 28.75em) {
     .list {
       grid-template-columns: repeat(4, 1fr);
     }
