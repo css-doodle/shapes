@@ -21,7 +21,7 @@ export default read(`
 
 
 #frames
-  split: 40;
+  points: 40;
   x: cos(2t)^2 * cos(5t);
   y: cos(2t)^2 * sin(5t);
   frame: 4;
