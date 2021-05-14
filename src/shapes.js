@@ -17,14 +17,14 @@ export default read(`
 #star with frame
   points: 10;
   r: cos(5t);
-  frame: 8;
+  frame: 10;
 
 
 #frames
   split: 40;
   x: cos(2t)^2 * cos(5t);
   y: cos(2t)^2 * sin(5t);
-  frame: 2;
+  frame: 4;
 
 
 #windwheel
