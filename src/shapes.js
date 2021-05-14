@@ -10,13 +10,13 @@ export default read(`
 
 
 #another star
-  points: 10;
-  r: cos(5t);
+  points: 5;
+  turn: 2;
 
 
 #star with frame
-  points: 10;
-  r: cos(5t);
+  points: 5;
+  turn: 2;
   frame: 10;
 
 
