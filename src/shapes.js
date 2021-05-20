@@ -86,10 +86,9 @@ export default read(`
 
 #drop
   points: 200;
-  rotate: 90;
   scale: .95;
-  x: sin(t);
-  y: (1 + sin(t)) * cos(t) / 1.9;
+  x: (1 + sin(t)) * cos(t) / 1.9;
+  y: sin(t);
 
 
 #heart
@@ -110,11 +109,10 @@ export default read(`
 
 #heart3
   points: 200;
-  rotate: 180;
-  a: cos(t)*13/18 - cos(2t)*5/18;
-  b: cos(3t)/18 + cos(4t)/18;
+  a: cos(3t)/18 + cos(4t)/18;
+  b: cos(t)*13/18 - cos(2t)*5/18;
   x: .75 * sin(t)^3;
-  y: a - b;
+  y: a - b - .15;
 
 
 #four-leaf clover
