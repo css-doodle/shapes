@@ -6,7 +6,7 @@ The shape is defined with [polar equations](https://en.wikipedia.org/wiki/Polar_
 
 <br/>
 <a href="http://css-doodle.com/shapes">
-	<img alt="screenshot of interface" src="screenshot.png" width="400px"/>
+	<img alt="screenshot of interface" src="screenshot.png?v2" width="600px"/>
 </a><br/>
 
 ### Commands
