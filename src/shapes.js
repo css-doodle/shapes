@@ -241,10 +241,10 @@ export default read(`
 
 
 #flower2
-  points: 200;;
-  r: sin(7t)/2^cos(14t)/4;
+  points: 200;
   scale: .8;
   frame: 100;
+  r: sin(7t)/2^cos(14t)/4;
 
 
 #hypershape
