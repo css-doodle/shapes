@@ -61,11 +61,11 @@
     margin: auto;
     display: grid;
     gap: 1vmin;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     margin-bottom: 2em;
   }
 
-  @media screen and (max-width: 47.5em) {
+  @media screen and (max-width: 53.75em) {
     .list {
       grid-template-columns: repeat(6, 1fr);
     }

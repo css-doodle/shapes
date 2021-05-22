@@ -27,6 +27,14 @@ export default read(`
   frame: 4;
 
 
+#sun
+  points: 128;
+  turn: 2;
+  frame: 10;
+  scale: .9;
+  r: seq(.85, 10, .85);
+
+
 #windwheel
   points: 18;
   R: seq(.618, 1, 0);
@@ -232,6 +240,13 @@ export default read(`
   r: cos(5t)^2 + sin(5t) + .3;
 
 
+#flower2
+  points: 200;;
+  r: sin(7t)/2^cos(14t)/4;
+  scale: .8;
+  frame: 100;
+
+
 #hypershape
   points: 360;
   m: 5;
@@ -286,11 +301,44 @@ export default read(`
   y: sin(9t)^9;
 
 
+#stamp
+  fill-rule: evenodd;
+  points: 36;
+  scale: .45;
+  x: cos(4t) + cos(7t) ;
+  y: sin(4t) + sin(7t) ;
+
+
 #snake
   points: 200;
   scale: .8;
   x: sin(2.63t) / 5;
   y: cos(t);
+
+
+#lake
+  points: 1500;
+  scale: .9;
+  a: 3;
+  x: a * cos(2t) * (1.2 - sin(5y)) * .5;
+  y: a * (sin(2t) + 1.5 * cos(6t)) * .4;
+
+
+#lake2
+  points: 400;
+  a: 1;
+  b: 1.9;
+  x: y * cos(18y) + a*b*sin(t*y);
+  y: a * cos(t) * 1.4;
+
+
+#tree
+  split: 1000;
+  a: 8;
+  scale: .06;
+  origin: 14 12;
+  x: (1.4a * cos(.5t) + cos(5t*a) - 1) * 2;
+  y: (a * sin(1.8t) - sin(5t*a)) * 3;
 `);
 
 
