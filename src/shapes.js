@@ -305,8 +305,8 @@ export default read(`
   fill-rule: evenodd;
   points: 36;
   scale: .45;
-  x: cos(4t) + cos(7t) ;
-  y: sin(4t) + sin(7t) ;
+  x: cos(4t) + cos(7t);
+  y: sin(4t) + sin(7t);
 
 
 #snake
