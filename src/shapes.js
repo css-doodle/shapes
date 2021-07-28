@@ -333,7 +333,7 @@ export default read(`
 
 
 #tree
-  split: 1000;
+  points: 1000;
   a: 8;
   scale: .06;
   origin: 14 12;
