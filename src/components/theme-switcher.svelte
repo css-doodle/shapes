@@ -1,7 +1,17 @@
 <button reset on:click={handleClick}>
   {#if theme == 'dark'}
     <span class="toggle dark">
-      <css-doodle use="var(--lines)"></css-doodle>
+      <css-doodle>
+        <style>
+          @grid: 10x1;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          @size: 28px 1px;
+          background: linear-gradient(to left, #ddd 3px, transparent 0);
+          transform: translate(-50%, -50%) rotate(calc(360deg / @I * @i));
+        </style>
+      </css-doodle>
     </span>
   {:else}
     <span class="toggle light"></span>
@@ -55,15 +65,6 @@
     width: 100%; height: 100%;
     animation: move_sun .4s ease;
     animation-fill-mode: both;
-    --lines: (
-      @grid: 10x1;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      @size: 28px 1px;
-      background: linear-gradient(to left, #ddd 3px, transparent 0);
-      transform: translate(-50%, -50%) rotate(calc(360deg / @I * @i));
-    );
   }
 
   @keyframes move_sun {
