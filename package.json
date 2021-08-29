@@ -4,8 +4,10 @@
   "description": "Discover CSS polygon shapes with css-doodle",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve --mode=development",
-    "build": "webpack --mode=production --progress"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --no-source-maps",
+    "prebuild": "rm -rf dist/*"
+
   },
   "repository": {
     "type": "git",
@@ -18,16 +20,9 @@
   },
   "homepage": "https://github.com/css-doodle/shapes#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.2.4",
-    "html-loader": "^2.1.1",
-    "html-webpack-plugin": "^4.5.1",
-    "mini-css-extract-plugin": "^1.3.9",
-    "svelte": "^3.31.2",
-    "svelte-loader": "3.0.0",
-    "webpack": "^5.24.2",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-svelte": "^4.0.9",
+    "svelte": "^3.42.4"
   },
   "dependencies": {
     "codemirror": "^5.59.1",
