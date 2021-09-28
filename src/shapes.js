@@ -38,7 +38,7 @@ export default read(`
 #windwheel
   points: 18;
   R: seq(.618, 1, 0);
-  T: seq(t+.55, t, t);
+  T: seq(t-.55, t, t);
   x: R * cos(T);
   y: R * sin(T);
 
@@ -96,21 +96,20 @@ export default read(`
   points: 200;
   scale: .95;
   x: (1 + sin(t)) * cos(t) / 1.9;
-  y: sin(t);
+  -y: sin(t);
 
 
 #heart
   points: 100;
   scale: .4;
   x: sin(2t) + sin(t) * 1.2;
-  y: cos(t) + cos(2t) * 1.2 - .3;
+  -y: cos(t) + cos(2t) * 1.2 - .3;
 
 
 #heart2
   points: 2400;
   scale: .34;
   origin: 0 -1.6;
-  rotate: 180;
   s: sqrt.abs.cos(t) / (sin(t) + 1.6);
   r: 2 + (s - 2) * sin(t);
 
@@ -120,7 +119,7 @@ export default read(`
   a: cos(3t)/18 + cos(4t)/18;
   b: cos(t)*13/18 - cos(2t)*5/18;
   x: .75 * sin(t)^3;
-  y: a - b - .15;
+  -y: a - b - .15;
 
 
 #four-leaf clover
@@ -208,7 +207,7 @@ export default read(`
   points: 200;
   scale: .3;
   x: sin(4t) + 2 * sin(t);
-  y: cos(3t) + 2 * cos(t);
+  -y: cos(3t) + 2 * cos(t);
 
 
 #number eight
@@ -230,7 +229,7 @@ export default read(`
   scale: .35;
   rotate: 45;
   x: sin(t) + cos(7t) + cos(2t) + .35;
-  y: cos(4t) + sin(4t) + sin(t);
+  -y: cos(4t) + sin(4t) + sin(t);
 
 
 #flower petal
@@ -259,7 +258,6 @@ export default read(`
 #vase
   points: 200;
   scale: .3;
-  rotate: 180;
   x: sin(4t) + sin(t) * 1.3;
   y: cos(t) + cos(t) * 4.9 + .3;
 
@@ -312,24 +310,24 @@ export default read(`
 #snake
   points: 200;
   scale: .8;
-  x: sin(2.63t) / 5;
-  y: cos(t);
+  -x: sin(2.63t) / 5;
+  -y: cos(t);
 
 
 #lake
   points: 1500;
   scale: .9;
-  a: 3;
-  x: a * cos(2t) * (1.2 - sin(5y)) * .5;
-  y: a * (sin(2t) + 1.5 * cos(6t)) * .4;
+  rotate: 180;
+  x: 1.5 * cos(2t) * (1.2 - sin(5y));
+  y: -1.2 * (sin(2t) + 1.5 * cos(6t));
 
 
 #lake2
   points: 400;
   a: 1;
   b: 1.9;
-  x: y * cos(18y) + a*b*sin(t*y);
-  y: a * cos(t) * 1.4;
+  x: -y * cos(18y) + a*b*sin(t*y);
+  y: -a * cos(t) * 1.4;
 
 
 #tree
