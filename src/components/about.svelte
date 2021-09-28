@@ -35,8 +35,8 @@
         <span>number for scale factor</span>;
       </li>
       <li>
-        <strong>origin</strong>
-        <span>a pair of value for setting coordinate origin</span>;
+        <strong>move</strong>
+        <span>a pair of value for translating <code>x, y</code> coords</span>;
       </li>
       <li>
         <strong>turn</strong>
