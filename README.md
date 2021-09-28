@@ -15,7 +15,6 @@ The shape is defined with [polar equations](https://en.wikipedia.org/wiki/Polar_
 * `points`: number between 3 - 3600;
 * `degree`:  number in degree for rotation;
 * `scale`: number for scale factor;
-* `origin`: a pair of value for setting coordinate origin;
 * `move`: a pair of value for translating <code>x, y</code> coords;
 * `turn`: angle between start/end point, defaults to be 1;
 * `x`: x coordinate for cartesian equation;
