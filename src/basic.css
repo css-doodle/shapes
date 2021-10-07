@@ -20,7 +20,7 @@ body {
 
   --color-text: rgba(var(--color-rgb), .7);
   --color-link-active: rgba(var(--color-rgb), .2);
-  --color-shape-bg: rgba(var(--color-rgb), .1);
+  --color-shape-bg: rgba(var(--color-rgb), .07);
   --color-shape: rgba(var(--color-rgb), .85);
   --color-button-border: rgba(var(--color-rgb), .2);
   --color-button-bg: transparent;
@@ -73,7 +73,7 @@ body[theme="dark"] {
 
   --color-text: rgba(var(--color-rgb), .7);
   --color-link-active: rgba(var(--color-rgb), .2);
-  --color-shape-bg: rgba(var(--color-rgb), .1);
+  --color-shape-bg: rgba(var(--color-rgb), .07);
   --color-shape: rgba(var(--color-rgb), .85);
   --color-button-border: rgba(var(--color-rgb), .2);
   --color-button-bg: transparent;
