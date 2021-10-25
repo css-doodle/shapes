@@ -58,7 +58,7 @@
 
     <h2>Operations in equations</h2>
     <ul>
-      <li>Operations available: <em>+ - * / % ^</em></li>
+      <li>Operations available: <em>+ - * / % ^ | &</em></li>
       <li>
         All JavaScript Math functions and constants are supported.
         Such as

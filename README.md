@@ -24,7 +24,7 @@ The shape is defined with [polar equations](https://en.wikipedia.org/wiki/Polar_
 
 ### Operations
 
-* Operations available: `+`, `-`, `*`, `/`, `%`, `^`
+* Operations available: `+`, `-`, `*`, `/`, `%`, `^`, `|`, `&`.
 * All JavaScript Math functions and constants can be used. Such as `sin`, `cos`, `tan`, `PI` or `π` etc.
 
 ### Variables
