@@ -7,7 +7,6 @@
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html --no-source-maps --public-url .",
     "prebuild": "rm -rf dist/*"
-
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,7 @@
   },
   "dependencies": {
     "codemirror": "^5.59.1",
-    "css-doodle": "^0.21.2",
+    "css-doodle": "^0.21.4",
     "lodash": "^4.17.20"
   },
   "browserslist": [

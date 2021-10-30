@@ -17,7 +17,7 @@ export default read(`
 #star with frame
   points: 5;
   turn: 2;
-  frame: 10;
+  frame: 5;
 
 
 #frames
@@ -30,7 +30,7 @@ export default read(`
 #sun
   points: 128;
   turn: 2;
-  frame: 10;
+  frame: 5;
   scale: .9;
   r: seq(.85, 10, .85);
 
@@ -94,8 +94,8 @@ export default read(`
 
 #drop
   points: 200;
-  scale: .95;
-  x: (1 + sin(t)) * cos(t) / 1.9;
+  scale: .5 .95;
+  x: (1 + sin(t)) * cos(t);
   y: -sin(t);
 
 
@@ -333,10 +333,10 @@ export default read(`
 #tree
   points: 1000;
   a: 8;
-  scale: .06;
-  origin: 14 12;
-  x: (1.4a * cos(.5t) + cos(5t*a) - 1) * 2;
-  y: (a * sin(1.8t) - sin(5t*a)) * 3;
+  scale: .12 .18;
+  origin: 7 4;
+  x: 1.4a * cos(.5t) + cos(5t*a) - 1;
+  y: a * sin(1.8t) - sin(5t*a);
 `);
 
 
