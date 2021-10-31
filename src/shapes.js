@@ -351,8 +351,7 @@ export default read(`
   rotate: 90;
   scale: .8;
   x: (.99 + cos(9t)) * 2.3;
-  y: x^9*sin(x^8 * 3t) +
-     sin(13.6x-9.01t)/cos(t);
+  y: x^9*sin(x^8*3t) + sin(13.6x-9.01t)/cos(t);
 
 
 #landscape2
