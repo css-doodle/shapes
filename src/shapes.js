@@ -21,10 +21,10 @@ export default read(`
 
 
 #frames
+  frame: 4;
   points: 40;
   x: cos(2t)^2 * cos(5t);
   y: cos(2t)^2 * sin(5t);
-  frame: 4;
 
 
 #sun
@@ -107,7 +107,7 @@ export default read(`
 
 
 #heart2
-  points: 2400;
+  points: 1200;
   scale: .34;
   origin: 0 -1.6;
   s: sqrt.abs.cos(t) / (sin(t) + 1.6);
@@ -150,21 +150,21 @@ export default read(`
 
 
 #css-doodle logo
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 400;
   x: cos(5t)^2 * sin(t);
   y: sin(2t)^2 * cos(5t);
 
 
 #butterfly 3
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 400;
   x: cos(2t) * cos(5t) * sin(t);
   y: sin(2t) * sin(4t) * cos(5t);
 
 
 #flower
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 300;
   scale: .45;
   x: cos(2t) + cos(π - 7t);
@@ -172,7 +172,7 @@ export default read(`
 
 
 #flower 2
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 300;
   scale: .45;
   x: cos(2t) + cos(7t);
@@ -180,7 +180,7 @@ export default read(`
 
 
 #heart
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 300;
   scale: .45;
   x: cos(4t) + cos(5t);
@@ -188,7 +188,7 @@ export default read(`
 
 
 #holes
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 200;
   scale: .3;
   x: 2 * sin(t) + sin(7t);
@@ -233,7 +233,7 @@ export default read(`
 
 
 #flower petal
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 200;
   scale: .6;
   r: cos(5t)^2 + sin(5t) + .3;
@@ -262,6 +262,13 @@ export default read(`
   y: cos(t) + cos(t) * 4.9 + .3;
 
 
+#vase 2
+  points: 500;
+  scale: .34 .17;
+  x: sin(2t) + .8 * cos(4.5t);
+  y: cos(2t) * (6-cos(x/1.6));
+
+
 #popcorn
   points: 400;
   scale: .7;
@@ -285,7 +292,7 @@ export default read(`
 
 
 #pattern
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 36;
   scale: .45;
   x: cos(t) + cos(9t);
@@ -293,14 +300,14 @@ export default read(`
 
 
 #pattern2
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 40;
   x: cos(9t)^9;
   y: sin(9t)^9;
 
 
 #stamp
-  fill-rule: evenodd;
+  fill: evenodd;
   points: 36;
   scale: .45;
   x: cos(4t) + cos(7t);
@@ -337,6 +344,314 @@ export default read(`
   origin: 7 4;
   x: 1.4a * cos(.5t) + cos(5t*a) - 1;
   y: a * sin(1.8t) - sin(5t*a);
+
+
+#landscape
+  points: 90;
+  rotate: 90;
+  scale: .8;
+  x: (.99 + cos(9t)) * 2.3;
+  y: x^9*sin(x^8 * 3t) +
+     sin(13.6x-9.01t)/cos(t);
+
+
+#landscape2
+  points: 1000;
+  scale: .8;
+  move: .5 .64;
+  x: cos(t^t) + cos(1.8^t);
+  y: sin(t) + sin(2.305t)*sin(t);
+
+
+#rocks
+  points: 1000;
+  scale: 1.5 1;
+  x: cos(9t) + cos(9t)/9 + sin(139t)/2;
+  y: sin(t) + sin(t)/.5 + cos(29t)/3;
+
+
+#lattice
+  points: 180;
+  scale: .08;
+  x: 2 * sin(112t) + 11 * sin(t);
+  y: sin(47t) + 20 * sin(5t);
+
+
+#dance
+  points: 1000;
+  scale: .061 .06;
+  x: (11*cos(.6t) + cos(55t) - 2.8) * -1.81;
+  -y: (11*sin(9.03t) - sin(77t)) * 2.5 + 17;
+
+
+#strings
+  split: 360;
+  frame: 24;
+  turn: .5;
+  scale: .08;
+  x: 9 * cos(10t) + cos(44t);
+  y: 9 * sin(10t) + sin(44t);
+
+
+#dried fish
+  points: 360;
+  scale: .22;
+  x: sin(1t) + tan.sin(4t) + tan.sin(t);
+  y: cos(8t) + tan.cos(3t) + tan.cos(8t);
+
+
+#san
+  points: 360;
+  scale: .45;
+  move: 0 .2;
+  x: sin(4t) + sin(1t);
+  y: cos(3t) + cos(8t);
+
+
+#fish
+  points: 480;
+  scale: .3;
+  move: 0 .35;
+  x: sin(t) + sin(6t) + tan.sin(2t);
+  y: cos(t) + cos(5t) + tan.cos(8t);
+
+
+#fish2
+  points: 360;
+  scale: .28;
+  move: 0 .5;
+  x: sin(4t) + sin(4t) + tan.sin(t);
+  y: cos(5t) + cos(t) + tan.cos(8t);
+
+
+#fish 3
+  points: 360;
+  scale: .3;
+  move: 0 .6;
+  x: sin(5t) + sin(1t) + tan.sin(3t);
+  y: cos(2t) + cos(1t) + tan.cos(6t);
+
+
+#dog
+  points: 360;
+  scale: .3;
+  -y: cos(7t) + cos(3t) + cos(7t);
+  x: sin(8t) + sin(2t) + sin(t);
+
+
+#mask
+  points: 360;
+  scale: .49;
+  x: sin(5t) + sin(4t);
+  -y: cos(4t) + cos(10t);
+
+
+#mask 2
+  points: 360;
+  scale: .25;
+  x: sin(4t) + sin(2t) + tan.sin(4t);
+  -y: cos(3t) + cos(3t) + tan.cos(8t);
+
+
+#mask 3
+  points: 360;
+  scale: .27;
+  x: sin(2t) + sin(5t) + tan.sin(6t);
+  -y: cos(8t) + cos(2t) + tan.cos(5t);
+
+
+#mask 4
+  points: 360;
+  scale: .31 .28;
+  x: sin(6t) + sin(4t) + tan.sin(t);
+  -y: cos(t) + cos(4t) + tan.cos(7t);
+
+
+#hat
+  points: 360;
+  scale: .24;
+  move: 0 .5;
+  x: sin(4t) + tan.sin(t) + tan.sin(8t);
+  y: cos(6t) + tan.cos(4t) + tan.cos(5t);
+
+
+#hat2
+  points: 360;
+  scale: .32;
+  x: sin(t) + sin(7t) + sin(8t);
+  -y: cos(t) + cos(3t) + cos(5t);
+
+
+#zen
+  points: 360;
+  scale: .33;
+  x: sin(3t) + sin(6t) + sin(7t);
+  -y: 2*cos(t) + cos(7t);
+
+
+#swim
+  points: 360;
+  scale: .25;
+  x: sin(1t) + sin(1t) + tan.sin(6t);
+  -y: cos(1t) + cos(5t) + tan.cos(3t);
+
+
+#film
+  points: 1000;
+  move: 0 1;
+  x: cos(3t) + cos(t)/2 + sin(40t)/7;
+  y: sin(9t) + sin(t)/2 + cos(40t)/7;
+
+
+#latten
+  points: 360;
+  scale: .4;
+  x: (sin(t) + sin(5t) - sin(7t))*.8;
+  y: cos(t) + cos(5t) - cos(3t);
+
+
+#by the sea
+  points: 360;
+  scale: .42;
+  move: -.5 -.78;
+  x: sin(3t) + sin(2/t) + sin(4*t);
+  -y: cos(3t) + cos(1*t) + cos(2 * t);
+
+
+#abstract
+  points: 720;
+  scale: .4 .3;
+  move: -.5 0;
+  -y: cos(5t) + cos(3*t) + cos(5 * t);
+  x: sin(3t) + sin(3/t) + sin(2*t);
+
+
+#slice
+  points: 1000;
+  a: 2931;
+  scale: .9;
+  frame: 400;
+  fill: evenodd;
+  x: cos(t) + cos(17t) + sin(a*t)/9;
+  y: sin(t) + sin(17t) + cos(a*t)/9;
+
+
+#plant
+  points: 200;
+  scale: .9;
+  frame: 1000;
+  x: cos(t) + cos(6t)/2 + sin(30t)/4;
+  y: sin(t) + sin(6t)/2 + cos(30t)/4;
+
+
+#S shape
+  points: 180;
+  scale: .07;
+  -x: 3 * sin(2.6t) + 5 * sin(9t);
+  y: sin(4.1t) + 12 * sin(3t);
+
+
+#plane
+  points: 240;
+  scale: 1.2 1.65;
+  move: 0 .45;
+  x: cos(t) * cos(2t) * sin(3t);
+  -y: sin(t) * sin(3t) * cos(4t);
+
+
+#batman
+  points: 240;
+  scale: .3;
+  move: 0 .8;
+  x: sin(3t) + sin(4t) + sin(2t);
+  y: cos(4t) + cos(8t) + cos(4t);
+
+
+#fan
+  points: 180;
+  scale: .4;
+  x: cos(t) + cos(5t)/2 + sin(3t)/.8;
+  y: sin(t) + sin(5t)/2 + cos(3t)/.8;
+
+
+#symmetry
+  points: 360;
+  fill: evenodd;
+  scale: .6;
+  x: cos(t) + cos(6t)/2 + sin(14t)/8;
+  y: sin(t) + sin(6t)/2 + cos(14t)/8;
+
+
+#organized
+  points: 90;
+  scale: .15;
+  rotate: 135;
+  x: cos(t) * (8 - sin(y^2));
+  y: 1.5 * sin(t) / cos(1t) * cos(4t) % 1;
+
+
+#spaceship
+  points: 360;
+  scale: .35;
+  move: 0 1;
+  y: cos(3t) + cos(6t) + tan.cos(3t);
+  x: sin(7t) + sin(6t) + tan.sin(t);
+
+
+#dip
+  points: 180;
+  scale: .3;
+  -x: sin(3t) + sin(6/t) + cos(2t);
+  -y: 2*cos(t) + sin(2t);
+
+
+#semlly
+  points: 360;
+  scale: .3;
+  move: 0 .3;
+  x: sin(t) + sin(3t) + sin(4t);
+  y: cos(t) + cos(3t) + cos(5t);
+
+
+#shine
+  points: 20;
+  scale: 1.2;
+  r: cos(222t)^224-.2;
+
+
+#magic
+  points: 31;
+  rotate: 90;
+  r: seq(1, .05, .6, 0, 0);
+
+
+#wind
+  points: 9;
+  rotate: -40;
+  move: .15 -.5;
+  r: 1.5 * sin(-10.278t);
+
+
+#snake
+  points: 1000;
+  scale: .13;
+  x: 6 * cos.range(t, 3t) + cos(12t);
+  y: 6 * sin(t) - sin(12t);
+
+
+#critter
+  points: 240;
+  scale: .32;
+  move: 0 -.5;
+  x: sin(2t) + sin(5t) + sin(7t);
+  -y: cos(3t) + cos(4t) + cos(7t);
+
+
+#apple
+  points: 360;
+  scale: .3;
+  -y: cos(5t) + cos(2t) + cos(5t);
+  x: sin(5t) + sin(4t) + sin(3t);
 `);
 
 

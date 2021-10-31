@@ -15,7 +15,7 @@
     <h2>Commands</h2>
     <ul>
       <li>
-        <strong>fill-rule</strong>
+        <strong>fill</strong>
         <span>nonzero | evenodd</span>;
       </li>
       <li>

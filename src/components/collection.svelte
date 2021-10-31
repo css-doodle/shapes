@@ -61,31 +61,34 @@
     margin: auto;
     display: grid;
     gap: 1vmin;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     margin-bottom: 2em;
   }
 
-  @media screen and (max-width: 53.75em) {
+  @media screen and (min-width: 80em) {
     .list {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(12, 1fr);
     }
   }
-  @media screen and (max-width: 33.2em) {
+  @media screen and (max-width: 80em) {
+    .list {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+  @media screen and (max-width: 51.25em) {
     .list {
       grid-template-columns: repeat(5, 1fr);
     }
-    .collection {
-      margin-top: 4em;
-    }
   }
-  @media screen and (max-width: 28.75em) {
+  @media screen and (max-width: 32em) {
     .list {
       grid-template-columns: repeat(4, 1fr);
     }
   }
-  @media screen and (max-width: 21em) {
+  @media screen and (max-width: 25em) {
     .list {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
 </style>

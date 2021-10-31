@@ -29,8 +29,8 @@
 
 <style>
   css-doodle {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
@@ -45,13 +45,6 @@
         box-shadow: inset 0 0 0 1px var(--color-main);
       }
     );
-  }
-
-  @media screen and (max-width:47.5em) {
-    css-doodle {
-      width: 80px;
-      height: 80px;
-    }
   }
 
   @media screen and (max-width:24em) {
