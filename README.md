@@ -5,14 +5,14 @@ with [css-doodle](https://css-doodle.com) `@shape()` function and mathematical e
 
 <br/>
 <a href="http://css-doodle.com/shapes">
-	<img alt="screenshot of interface" src="screenshot.png?v2" />
+  <img alt="screenshot of interface" src="screenshot.png?v2" />
 </a><br/>
 
 ### Commands
 * `fill`:  nonzero | evenodd;
 * `frame`: number for frame size;
 * `points`: number between 3 - 3600;
-* `degree`:  number in degree for rotation;
+* `rotate`:  number in degree for rotation;
 * `scale`: number for scale factor;
 * `move`: a pair of value for translating <code>x, y</code> coords;
 * `turn`: angle between start/end point, defaults to be 1;

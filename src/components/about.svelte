@@ -5,11 +5,7 @@
       This tool is for discovering new CSS polygon shapes generated with
       <a href="https://css-doodle.com">css-doodle</a> <em>@shape</em> function
       and mathematical expressions.
-    </p>
-    <p>
-      The shape is defined with
-      <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system">polar equations</a>
-      or <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">cartesian equations</a>.
+      Read more about its usage: <a href="https://yuanchuan.dev/polygon-shapes">https://yuanchuan.dev/polygon-shapes</a>.
     </p>
 
     <h2>Commands</h2>
