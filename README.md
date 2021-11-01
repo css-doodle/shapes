@@ -1,16 +1,15 @@
 # Shapes
 
 A tool for discovering new CSS polygon shapes generated
-with [css-doodle](https://css-doodle.com) `@shape` function and mathematical expressions.
-The shape is defined with [polar equations](https://en.wikipedia.org/wiki/Polar_coordinate_system) or [cartesian equations](https://en.wikipedia.org/wiki/Cartesian_coordinate_system).
+with [css-doodle](https://css-doodle.com) `@shape()` function and mathematical expressions. Read more about its usage: [https://yuanchuan.dev/polygon-shapes](https://yuanchuan.dev/polygon-shapes).
 
 <br/>
 <a href="http://css-doodle.com/shapes">
-	<img alt="screenshot of interface" src="screenshot.png?v2" width="600px"/>
+	<img alt="screenshot of interface" src="screenshot.png?v2" />
 </a><br/>
 
 ### Commands
-* `fill-rule`:  nonzero | evenodd;
+* `fill`:  nonzero | evenodd;
 * `frame`: number for frame size;
 * `points`: number between 3 - 3600;
 * `degree`:  number in degree for rotation;
@@ -24,7 +23,7 @@ The shape is defined with [polar equations](https://en.wikipedia.org/wiki/Polar_
 
 ### Operations
 
-* Operations available: `+`, `-`, `*`, `/`, `%`, `^`, `|`, `&`.
+* Operations available: `+`, `-`, `*`, `/`, `%`, `^`, `|`, `&`, `>>`, `<<`.
 * All JavaScript Math functions and constants can be used. Such as `sin`, `cos`, `tan`, `PI` or `π` etc.
 
 ### Variables
