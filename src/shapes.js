@@ -502,10 +502,10 @@ export default read(`
   y: sin(9t) + sin(t)/2 + cos(40t)/7;
 
 
-#latten
+#Chinese lantern
   points: 360;
-  scale: .4;
-  x: (sin(t) + sin(5t) - sin(7t))*.8;
+  scale: .32 .4;
+  x: sin(t) + sin(5t) - sin(7t);
   y: cos(t) + cos(5t) - cos(3t);
 
 
