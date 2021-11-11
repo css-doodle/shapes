@@ -395,7 +395,7 @@ export default read(`
 #dried fish
   points: 360;
   scale: .22;
-  x: sin(1t) + tan.sin(4t) + tan.sin(t);
+  x: sin(t) + tan.sin(4t) + tan.sin(t);
   y: cos(8t) + tan.cos(3t) + tan.cos(8t);
 
 
@@ -403,7 +403,7 @@ export default read(`
   points: 360;
   scale: .45;
   move: 0 .2;
-  x: sin(4t) + sin(1t);
+  x: sin(4t) + sin(t);
   y: cos(3t) + cos(8t);
 
 
@@ -427,8 +427,8 @@ export default read(`
   points: 360;
   scale: .3;
   move: 0 .6;
-  x: sin(5t) + sin(1t) + tan.sin(3t);
-  y: cos(2t) + cos(1t) + tan.cos(6t);
+  x: sin(5t) + sin(t) + tan.sin(3t);
+  y: cos(2t) + cos(t) + tan.cos(6t);
 
 
 #dog
@@ -491,8 +491,8 @@ export default read(`
 #swim
   points: 360;
   scale: .25;
-  x: sin(1t) + sin(1t) + tan.sin(6t);
-  -y: cos(1t) + cos(5t) + tan.cos(3t);
+  x: sin(t) + sin(t) + tan.sin(6t);
+  -y: cos(t) + cos(5t) + tan.cos(3t);
 
 
 #film
@@ -586,7 +586,7 @@ export default read(`
   scale: .15;
   rotate: 135;
   x: cos(t) * (8 - sin(y^2));
-  y: 1.5 * sin(t) / cos(1t) * cos(4t) % 1;
+  y: 1.5 * sin(t) / cos(t) * cos(4t) % 1;
 
 
 #spaceship
