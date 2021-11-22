@@ -513,16 +513,16 @@ export default read(`
   points: 360;
   scale: .42;
   move: -.5 -.78;
-  x: sin(3t) + sin(2/t) + sin(4*t);
-  -y: cos(3t) + cos(1*t) + cos(2 * t);
+  x: sin(3t) + sin(2/t) + sin(4t);
+  -y: cos(3t) + cos(t) + cos(2t);
 
 
 #abstract
   points: 720;
   scale: .4 .3;
   move: -.5 0;
-  -y: cos(5t) + cos(3*t) + cos(5 * t);
-  x: sin(3t) + sin(3/t) + sin(2*t);
+  -y: cos(5t) + cos(3t) + cos(5t);
+  x: sin(3t) + sin(3/t) + sin(2t);
 
 
 #slice
@@ -585,8 +585,8 @@ export default read(`
   points: 90;
   scale: .15;
   rotate: 135;
-  x: cos(t) * (8 - sin(y^2));
-  y: 1.5 * sin(t) / cos(t) * cos(4t) % 1;
+  x: cos(t)*(8 - sin(y^2));
+  y: 1.5*sin(t)/cos(t)*cos(4t)%1;
 
 
 #spaceship
