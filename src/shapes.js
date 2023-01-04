@@ -384,7 +384,7 @@ export default read(`
 
 
 #strings
-  split: 360;
+  points: 360;
   frame: 24;
   turn: .5;
   scale: .08;
