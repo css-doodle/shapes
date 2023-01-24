@@ -45,6 +45,8 @@
         box-shadow: inset 0 0 0 1px var(--color-main);
       }
     );
+    /* Chrome needs an extra statement to make it work. Parsing error */
+    --hack: ();
   }
 
   @media screen and (max-width:24em) {
