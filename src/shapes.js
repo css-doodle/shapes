@@ -20,6 +20,12 @@ export default read(`
   frame: 5;
 
 
+#star 2
+  points: 400;
+  scale: .012;
+  r: 50*abs.sin(2.5t)-81;
+
+
 #frames
   frame: 4;
   points: 40;
@@ -651,6 +657,38 @@ export default read(`
   scale: .3;
   -y: cos(5t) + cos(2t) + cos(5t);
   x: sin(5t) + sin(4t) + sin(3t);
+
+
+#bud 2
+  points: 360;
+  r: abs.sin.tan(sin(1.5t)*1.14);
+
+
+#carrot
+  points: 240;
+  scale: .2 1;
+  r: abs.cos(exp(cos(π/2-t)*4));
+
+
+#weird shape
+  points: 360;
+  scale: .45;
+  r: 1/(2-2.3*cos.cos(3.5t)^2.3)^.16;
+
+
+#ship
+  points: 170;
+  x: cos(9t)/cos(4t)*sin(t)/23;
+  y: sin(19t)/sin(4t)*cos(t);
+
+
+#tower
+  points: 178;
+  rotate: -90;
+  scale: .25;
+  move: 0 4.5;
+  x: 3.4129*sin(2t)/cos(t)*cos(2t);
+  y: cos(t)*(2.4 - sin(x^x*1.5));
 `);
 
 
