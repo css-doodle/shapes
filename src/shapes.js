@@ -151,6 +151,7 @@ export default read(`
 
 #gear 2
   points: 120;
+  scale: .8;
   t: range(10000);
 
 
