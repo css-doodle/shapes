@@ -3,7 +3,7 @@
     <span class="toggle dark">
       <css-doodle>
         <style>
-          @grid: 10x1;
+          @grid: 10x1 noclip;
           position: absolute;
           left: 50%;
           top: 50%;
