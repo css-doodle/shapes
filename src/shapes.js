@@ -26,6 +26,11 @@ export default read(`
   r: 50*abs.sin(2.5t)-81;
 
 
+#star 3
+  points: 360;
+  r: .8 + cos(5t)*.15;
+
+
 #frames
   frame: 4;
   points: 40;
@@ -142,6 +147,11 @@ export default read(`
   points: 300;
   scale: .7;
   r: cos.cos.cos.cos.cos(7t) ^ cos(7t);
+
+
+#gear 2
+  points: 120;
+  t: range(10000);
 
 
 #butterfly
@@ -689,6 +699,25 @@ export default read(`
   move: 0 4.5;
   x: 3.4129*sin(2t)/cos(t)*cos(2t);
   y: cos(t)*(2.4 - sin(x^x*1.5));
+
+
+#egg
+  points: 720;
+  frame: 99;
+  scale: .85;
+  a: .35;
+  x: y*cos(y*3.5/a)+a*sin(t)*.1;
+  y: a*cos(t);
+
+
+#baby
+  points: 360;
+  frame: -90;
+  rotate: -90;
+  scale: .7;
+  move: 0 .35;
+  x: y*tan(2y)+.1*sin(9t);
+  y: .5*cos(t);
 `);
 
 
