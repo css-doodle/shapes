@@ -707,7 +707,7 @@ export default read(`
   frame: 99;
   scale: .85;
   a: .35;
-  x: y*cos(y*3.5/a)+a*sin(t)*.1;
+  x: y*cos(3.5*cos(t))+a*sin(t)*.1;
   y: a*cos(t);
 
 
